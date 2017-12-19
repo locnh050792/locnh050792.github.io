@@ -1,0 +1,619 @@
+<html>
+
+<head>
+  <title>Bai Tap MENU</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+  <link rel="stylesheet" href="./animation.css">
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Maven Pro', sans-serif;
+      font-size: 18px;
+    }
+
+    body {
+      background-image: url();
+      margin: 0;
+      padding: 0;
+      background: whitesmoke;
+      font-family: 'Maven Pro', sans-serif;
+      font-size: 18px;
+    }
+
+    .wrap {
+      max-width: 1500px;
+      margin: auto;
+      padding: auto;
+      background: white;
+    }
+
+    #banner {
+
+      margin: 0;
+      padding: 0;
+    }
+
+    #backtop {
+      position: fixed;
+      bottom: 20px;
+      right: 10px;
+    }
+
+    #Call {
+      position: fixed;
+      bottom: 20px;
+      left: 5px;
+
+    }
+
+
+    .NoiDung span {
+      font-style: italic;
+    }
+
+    .imageintro img {
+      float: left;
+    }
+
+    .sanpham {
+      padding: 0;
+      margin: 0;
+      max-height: 1500px;
+    }
+
+    .title {
+      text-align: center;
+      font-weight: bold;
+      font-family: monospace;
+
+    }
+
+    .lienhe {
+      height: 400px;
+    }
+
+    .box {
+      border: 1px solid gainsboro;
+      border-top-width: 5px;
+      padding: 20px;
+    }
+
+    .info {
+      border-color: gainsboro;
+    }
+
+    .contact {
+      border-color: gainsboro;
+    }
+
+    .company {
+      border-color: gainsboro;
+    }
+
+    .info span {
+      color: brown;
+
+    }
+
+    .contact span {
+      color: brown;
+
+    }
+
+    .company span {
+      color: brown;
+
+    }
+
+    .lienhe a:link {
+      color: black;
+      text-decoration: none;
+    }
+
+    .lienhe a:hover {
+      color: black;
+      text-decoration: none;
+    }
+
+    .lienhe a:active {
+      color: black;
+      text-decoration: none;
+    }
+
+    .lienhe a:visited {
+      color: black;
+      text-decoration: none;
+    }
+
+    a:link {
+      color: black;
+
+    }
+
+    a:hover {
+      color: black;
+
+    }
+
+    a:active {
+      color: black;
+
+    }
+
+    a:visited {
+      color: black;
+
+    }
+
+    .NoiDung.text {
+      color: brown;
+      margin-top: 50px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #777;
+      padding-bottom: 20px;
+    }
+
+    h2 {
+      color: brown;
+      text-align: center;
+    }
+
+    h3 {
+      color: brown;
+      text-align: center;
+    }
+
+    .row {
+      padding: 0;
+      margin: 0;
+    }
+
+
+    .row img {
+      padding-top: 20px;
+      text-align: center;
+
+    }
+
+    .sanpham img:hover {
+      transform: translate(0, -5px)
+    }
+
+    span {
+      text-align: center;
+    }
+
+    @media (max-width:768px) {
+      #backtop {
+        display: none;
+      }
+    }
+
+    #callButton {
+      -webkit-animation: ringphone 2s infinite;
+      -webkit-animation-iteration-count: infinite;
+      
+    }
+
+    @media (min-width:1440px) {
+      #callButton {
+        display: none;
+      }
+    }
+
+
+    @media (min-width:500px) and (max-width:1000px) {
+      .product {
+        width: 50%;
+      }
+    }
+
+    .navbar-header {
+      position: relative;
+    }
+
+    .market {
+      position: absolute;
+      right: 80px;
+      top: -2px;
+    }
+
+    img.img-responsive {
+      padding-top: 30px;
+    }
+
+    span {
+      color: brown;
+    }
+
+    .product-clone {
+      position: fixed;
+      z-index: 9999;
+    }
+
+    .slide {
+      position: relative;
+      width: 100%;
+
+    }
+
+    .slide img {
+      position: absolute;
+      top: 0;
+    }
+
+    @media (max-width:500px) {
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 30%;
+      }
+    }
+
+    @media (min-width:501px) and (max-width:767px) {
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 80%;
+      }
+    }
+
+    @media (min-width:768px) and (max-width:1000px) {
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 40%;
+      }
+    }
+
+    @media (min-width:1000px) and (max-width:1200px) {
+      .slide {
+        position: relative;
+        width: 100%;
+        height: 55%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="container-fluid">
+      <div>
+        <img id="banner" src="../img/banner2.jpg" class="img-responsive" />
+      </div>
+      <div id="maincontent">
+        <header>
+
+          <nav class="navbar navbar-default">
+            <div class="container-fluid">
+              <!-- Brand and toggle get grouped for better mobile display -->
+              <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Home</a>
+              </div>
+
+              <!-- Collect the nav links, forms, and other content for toggling -->
+              <div>
+                <div class="market">
+                  <ul class="nav navbar-nav navbar-right" data-price="0">
+                    <li>
+                      <a href="#">
+                        <span class="glyphicon glyphicon-shopping-cart"></span>
+                        <strong>$0</strong>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                  <ul class="nav navbar-nav">
+                    <li>
+                      <a href="KM-TT-HT.html">News</a>
+                    </li>
+                    <li>
+                      <a href="Allsp.html">Products
+                        <span class="sr-only">(current)</span>
+                      </a>
+                    </li>
+
+                    <li>
+                      <a href="LienHe.html"> Contact Us</a>
+                    </li>
+
+                  </ul>
+                </div>
+              </div>
+
+              <!-- /.navbar-collapse -->
+            </div>
+            <!-- /.container-fluid -->
+          </nav>
+        </header>
+        <div class="NoiDung">
+          <div class="row">
+            <div class="title">
+              <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+              <h1>Về Chúng Tôi </h1>
+            </div>
+          </div>
+
+          <div id="aboutUs">
+            <div class="row">
+              <div class="col-lg-4">
+                <div class="NoiDung text" style="color:brow;">
+                  <span>
+                    <p>Từ những người đam mê cà phê:</p>
+                    <p>Với niềm đam mê về thưởng thức cà phê, chúng tôi đã đi và trải nghiệm rất nhiều nền văn hóa về cà phê
+                      trên thế giới và chúng tôi nghĩ rằng tại sao không tạo nên một nền văn hóa thưởng thức cà phê.</p>
+                    <p> Đó là nơi giao thoa giữa văn hóa cà phê của các vùng trên thế giới. Chúng tôi đã du nhập những công nghệ
+                      tiên tiến nhất trên thế giới để mang lại cho người tiêu dùng Việt Nam những tinh hoa tuyệt vời nhất
+                      về cà phê.</p>
+                    <p>Giá trị của chúng tôi là mang đến cho khách hàng những ly cà phê sạch hảo hạng và thơm ngon nhất, chúng
+                      tôi mong muốn đưa trải nghiệm về cà phê của khách hàng lên một tầm cao mới. </p>
+                  </span>
+                </div>
+              </div>
+              <div class="col-lg-8">
+                <div class="NoiDung anh ">
+                  <div class="NoiDung anh1">
+                    <div class="slide">
+                      <img src="../img/cafe1.jpg" class="img-responsive" style="display: none"/>
+                      <img src="../img/cafe2.jpg" class="img-responsive" style="display: none"/>
+                      <img src="../img/cafe3.jpg" class="img-responsive" style="display: none"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="sanpham">
+          <div class="row">
+            <div class="title">
+              <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+              <h1>
+                Sản Phẩm
+              </h1>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+            <div data-price="14">
+              <div>
+                <img src="../img/anh2.png" class="img-responsive" />
+              </div>
+              <h2>Bella Aurora</h2>
+              <h3>NICARAGUA</h3>
+              <h3>$14</h3>
+              <button class="btn btn-default btn-block">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+            <div data-price="15">
+              <div>
+                <img src="../img/anh3.png" class="img-responsive" />
+              </div>
+              <h2>Mr. David Mburu</h2>
+              <h3>KENYA</h3>
+              <h3>$15</h3>
+              <button class="btn btn-default btn-block">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+            <div data-price="15">
+              <div>
+                <img src="../img/anh5.png" class="img-responsive" />
+              </div>
+              <h2>San Ramon</h2>
+              <h3>COSTA RICA</h3>
+              <h3>$15</h3>
+              <button class="btn btn-default btn-block">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+            <div data-price="15">
+              <div>
+                <img src="../img/anh6.png" class="img-responsive" />
+              </div>
+              <h2>Los Nacientes</h2>
+              <h3>COSTA RICA</h3>
+              <h3>$15</h3>
+              <button class="btn btn-default btn-block">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+            </div>
+          </div>
+
+
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+            <div data-price="15">
+              <div>
+                <img src="../img/anh7.png" class="img-responsive" />
+              </div>
+              <h2>R.Figueroa</h2>
+              <h3>COLOMBIA</h3>
+              <h3>$14</h3>
+              <button class="btn btn-default btn-block">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+            <div data-price="14">
+              <div>
+                <img src="../img/anh8.png" class="img-responsive" />
+              </div>
+              <h2>El Ishco
+              </h2>
+              <h3>EL SALVADOR</h3>
+              <h3>$14</h3>
+              <button class="btn btn-default btn-block">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+            </div>
+          </div>
+
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+            <div data-price="15">
+              <div>
+                <img src="../img/anh9.png" class="img-responsive" />
+              </div>
+              <h2>Meaza</h2>
+              <h3>ETHIOPIA</h3>
+              <h3>$15</h3>
+              <button class="btn btn-default btn-block">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+            </div>
+          </div>
+
+
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+            <div data-price="15">
+              <div>
+                <img src="../img/anh10.png" class="img-responsive" />
+              </div>
+              <h2>La Esperanza</h2>
+              <h3>EL SALVADOR
+              </h3>
+              <h3>$15</h3>
+              <button class="btn btn-default btn-block">
+                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+
+          <img src="../img/banner4.jpg" class="img-responsive" />
+        </div>
+        <div class="lienhe">
+          <div class="title">
+            <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+            <a href="LienHe.html#button">
+              <h1>Liên Hệ</h1>
+            </a>
+          </div>
+          <div class="row">
+            <div>
+
+            </div>
+            <div class="col-xs-12 col-ms-12 col-md-4 col-lg-4 box">
+              <h2>Thông tin cơ bản</h2>
+              <div>
+                <span>Công ty ABC coffee Việt Nam</span>
+              </div>
+              <div>
+                <span>Chi nhánh Hà Nội </span>
+              </div>
+              <div>
+                <span>Thành Lập 2017</span>
+              </div>
+            </div>
+            <div class="col-xs-12 col-ms-12 col-md-4 col-lg-4 box">
+              <h2>Thông tin liên hệ</h2>
+              <div>
+                <span>Địa Chỉ : Hà Nội - Việt Nam</span>
+              </div>
+              <div>
+                <span>Gmail : infoABC@gmail.com</span>
+              </div>
+              <div>
+                <span>Điện Thoại : 19001900</span>
+              </div>
+            </div>
+            <div class="col-xs-12 col-ms-12 col-md-4 col-lg-4 box">
+              <h2>Thời gian làm việc</h2>
+              <div>
+                <span>Thứ 2 tới thứ 6: 6h:00 - 22:30</span>
+              </div>
+              <div>
+                <span>Thứ 7: 7h:00 - 22h:30</span>
+              </div>
+              <div>
+                <span>Chủ nhật: 7h:00 - 12:00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <p style="text-align:center;">&#174; copyright 2017 ABC coffee Ltd. </p>
+      </div>
+    </div>
+    <div id="backtop">
+      <a href="#banner">
+        <img src="../img/back-to-top.png" title="BackToTop" alt="Back To Top" class="img-responsive" />
+      </a>
+    </div>
+    <div id="Call">
+      <a href="tel:00000000">
+        <img src="../img/call.png" title="Call Now" alt="Call Now" class="img-responsive" id="callButton" title="Call Now" />
+      </a>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+
+        if (0 < $('.product button').length) {
+          $('.product button').click(function () {
+            var offset = $(this).parent().offset();
+            $(this).parent().clone().addClass('product-clone').css({
+              'left': offset.left + 'px',
+              'top': parseInt(offset.top - $(window).scrollTop()) + 'px',
+              'width': $(this).parent().width() + 'px',
+              'height': $(this).parent().height() + 'px'
+            }).appendTo($('.product').parent());
+
+            var cart = $('nav .navbar-right strong').offset();
+            $('.product-clone').animate({ top: parseInt(cart.top - $(window).scrollTop()) + 'px', left: cart.left + 'px', 'height': '0px', 'width': '0px' }, 800, function () {
+              $(this).remove();
+              var price = parseInt($('nav .navbar-right').attr('data-price'));
+              var productPrice = parseInt($(this).attr('data-price'));
+              var cartPrice = parseInt(price + productPrice);
+              $('nav .navbar-right strong').html('$' + cartPrice);
+              $('nav .navbar-right').attr('data-price', cartPrice);
+            });
+          });
+        }
+      });
+      var img = $('.slide').children('img')
+      var isNum=0;
+      var count = 0;
+      img.eq(count).show();
+
+      setInterval(function () {
+        isNum+=1;
+        img.eq(count).fadeOut(1000);
+        count=isNum%3;
+        console.log(count);
+        img.eq(count).fadeIn(1000);
+        // if (count == img.length) {
+        //   count = 0;
+        //   img.eq(count).fadeIn(1000)
+        // }
+      }, 2500);
+
+    </script>
+
+</body>
+
+</html>

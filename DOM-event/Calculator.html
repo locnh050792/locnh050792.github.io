@@ -1,0 +1,234 @@
+	<html>
+	<head>
+		<title>Bai Tap DOM Event</title>
+		<style>
+
+
+		h1{
+			text-align: center;
+		}
+		body{
+			background: whitesmoke;
+		}
+
+		body button:hover {
+			background: white;
+		}
+
+		#dot:hover {
+			background: white;
+		}
+
+		body button:active {
+			opacity: 0.8;
+			transform: scale(1.15);
+		}
+
+		#equal:hover {
+			background: white;
+		}
+
+		.maincontent {
+			max-width: 400px;
+			margin: auto;
+			padding: auto;
+			height: 500px;
+			border: solid black 1px;
+			padding: 20px;
+		}
+
+		.box-result{
+			padding: 5px;
+		}	
+
+		#result {
+			width: 100%;
+			height: 10%;
+			background: whitesmoke;
+			border-radius: 5px;
+			font-size: 40px;
+
+		}
+
+		.right{
+			float: right;
+			width: 40%;
+		}
+
+
+		.right button {
+			width: 48.5%;
+			height: 15%;
+			font-weight: bold;
+			font-size: 20px;
+			background: orange;
+			border-radius: 5px;
+			border: 1px solid #666
+
+		}
+
+		.left {
+			width: 60%;
+		}
+
+		.left button {
+			width: 31.5%;
+			height: 15%;
+			font-weight: bold;
+			font-size: 20px;
+			background: #428bca;;
+			border-radius: 5px;
+			border: 1px solid #666
+
+
+		}
+
+		.reset{
+			padding-top: 5px;
+		}
+
+		.reset button {
+			width: 100%;
+			font-weight: bold;
+			font-size: 20px;
+			background: red;
+			border-radius: 5px;
+			border: 1px solid #666
+		}
+
+		#equal{
+			background: #87CEFA;
+		}
+
+		#dot{
+			background: #87CEFA;
+		}
+
+		.buttonleft{
+			padding: 3px;
+		}
+
+		.buttonright{
+			padding: 3px;
+		}
+
+	</style>
+</head>
+<body>
+
+
+	<div class="maincontent">
+		<h1>Calculator</h1>
+		<div class="box-result"><input id="result"/></div>
+		<div class="Calculator right">
+			<div class ="buttonright">
+				<button id="cong" value="+" onclick="Set_num(this.value)">+</button>
+				<button id ="binhPhuong" value="&sup2;" onclick="binhPhuong(this.value)">x&sup2;</button>
+			</div>
+			<div class ="buttonright">
+				<button id="tru" value="-" onclick="Set_num(this.value)">-</button>
+				<button id="canBacHai" value="&Sqrt;" onclick="canBacHai(this.value)">&Sqrt;</button>
+			</div>
+			<div class ="buttonright">
+				<button id="nhan" value="x" onclick="Set_num(this.value)">x</button>
+				<button id="giaiThua" value="!" onclick="giaiThua(this.value)">x!</button>
+			</div>
+			<div class ="buttonright">
+				<button id="chia" value=":" onclick="Set_num(this.value)">:</button>
+				<button id="phanTram" value="%" onclick="phanTram(this.value)">%</button>
+			</div>
+		</div>
+		<div class="Calculator left">
+			<div class ="buttonleft">
+				<button id="num1" value= "1" onclick="Set_num(this.value)">1</button>
+
+				<button id="num2" value= "2" onclick="Set_num(this.value)">2</button>
+
+				<button id="num3" value= "3" onclick="Set_num(this.value)">3</button>
+			</div>
+
+			<div class="buttonleft">
+				<button id="num4" value= "4" onclick="Set_num(this.value)">4</button>
+
+				<button id="num5" value= "5" onclick='Set_num(this.value)'>5</button>
+
+				<button id="num6" value= "6" onclick="Set_num(this.value)">6</button>
+			</div>
+
+			<div class ="buttonleft">
+				<button id="num7" value= "7" onclick="Set_num(this.value)">7</button>
+
+				<button id="num8" value= "8" onclick="Set_num(this.value)">8</button>
+
+				<button id="num9" value= "9" onclick="Set_num(this.value)">9</button>
+			</div>	
+
+			<div class ="buttonleft">
+				<button id="num0" value= "0" onclick="Set_num(this.value)">0</button>
+
+				<button id="dot" value= "." onclick="Set_num(this.value)">.</button>
+
+				<button id="equal" value="=" onclick="ketQua()">=</button>
+			</div>	
+		</div>
+
+		<div class ="reset" value="Xoa" onclick="Xoa()"><button >RESET</button></div>
+
+	</div>		
+	<script>
+		var x = "";
+		var str = "";
+		function getId (id){
+			return document.getElementById(id);
+		}
+
+		function Set_num(num){
+			x += num;
+			getId('result').value = x;	
+		}
+
+		function ketQua(){	
+			str = getId('result').value.replace("x","*").replace(":","/");
+			x = eval(str);
+			getId('result').value = x;
+		}
+
+		function Xoa(){
+			getId('result').value = '';
+			x = '';
+		}
+
+		function giaiThua (){
+			x = document.getElementById('result').value;
+			result = 1;
+			for (var i = x; i > 0; i--) {
+				result = result * i;
+			}
+			getId('result').value = result;
+		}
+		
+		
+		function phanTram(){
+			x = eval(getId('result').value*(1/100));
+
+			getId('result').value = x; 
+		}
+
+		function canBacHai(){
+			x = Math.sqrt(getId('result').value);
+			getId('result').value = x;
+		}
+
+		function binhPhuong(){
+			x = Math.pow(getId('result').value,2);
+			getId('result').value = x;
+		}
+
+
+
+	</script>
+
+
+
+</body>
+</html> 

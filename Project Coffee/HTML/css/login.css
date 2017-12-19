@@ -1,0 +1,394 @@
+
+.login{
+    z-index: 9999;
+}
+
+.panel-login {
+	border-color: #ccc;
+	-webkit-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	-moz-box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+	box-shadow: 0px 2px 3px 0px rgba(0,0,0,0.2);
+}
+.panel-login>.panel-heading {
+	color: #00415d;
+	background-color: #fff;
+	border-color: #fff;
+	text-align:center;
+}
+.panel-login>.panel-heading a{
+	text-decoration: none;
+	color: #666;
+	font-weight: bold;
+	font-size: 15px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-login>.panel-heading a.active{
+	color: brown;
+	font-size: 18px;
+}
+.panel-login>.panel-heading hr{
+	margin-top: 10px;
+	margin-bottom: 0px;
+	clear: both;
+	border: 0;
+	height: 1px;
+	background-image: -webkit-linear-gradient(left,rgba(0, 0, 0, 0),rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0));
+	background-image: -moz-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -ms-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+	background-image: -o-linear-gradient(left,rgba(0,0,0,0),rgba(0,0,0,0.15),rgba(0,0,0,0));
+}
+.panel-login input[type="text"],.panel-login input[type="email"],.panel-login input[type="password"] {
+	height: 45px;
+	border: 1px solid #ddd;
+	font-size: 16px;
+	-webkit-transition: all 0.1s linear;
+	-moz-transition: all 0.1s linear;
+	transition: all 0.1s linear;
+}
+.panel-login input:hover,
+.panel-login input:focus {
+	outline:none;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+	border-color: #ccc;
+}
+.btn-login {
+	background-color: #59B2E0;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #59B2E6;
+}
+.btn-login:hover,
+.btn-login:focus {
+	color: #fff;
+	background-color: #53A3CD;
+	border-color: #53A3CD;
+}
+.forgot-password {
+	text-decoration: underline;
+	color: #888;
+}
+.forgot-password:hover,
+.forgot-password:focus {
+	text-decoration: underline;
+	color: #666;
+}
+
+.btn-register {
+	background-color: #1CB94E;
+	outline: none;
+	color: #fff;
+	font-size: 14px;
+	height: auto;
+	font-weight: normal;
+	padding: 14px 0;
+	text-transform: uppercase;
+	border-color: #1CB94A;
+}
+.btn-register:hover,
+.btn-register:focus {
+	color: #fff;
+	background-color: #1CA347;
+	border-color: #1CA347;
+}
+* {
+	box-sizing: border-box;
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 18px;
+}
+
+body {
+	background-image: url();
+	margin: 0;
+	padding: 0;
+	background: whitesmoke;
+	font-family: 'Maven Pro', sans-serif;
+	font-size: 18px;
+}
+
+.wrap {
+	max-width: 1500px;
+	margin: auto;
+	padding: auto;
+	background: white;
+}
+
+#banner {
+
+	margin: 0;
+	padding: 0;
+}
+
+#backtop {
+	position: fixed;
+	bottom: 20px;
+	right: 10px;
+}
+
+#Call {
+	position: fixed;
+	bottom: 20px;
+	left: 5px;
+
+}
+
+
+.NoiDung span {
+	font-style: italic;
+}
+
+.imageintro img {
+	float: left;
+}
+
+.sanpham {
+	padding: 0;
+	margin: 0;
+	max-height: 1500px;
+}
+
+.title {
+	text-align: center;
+	font-weight: bold;
+	font-family: monospace;
+
+}
+
+.lienhe {
+	height: 400px;
+}
+
+.info {
+	border-color: gainsboro;
+	border-bottom: 2px solid gainsboro;
+}
+
+.contact {
+	border-color: gainsboro;
+}
+
+.company {
+	border-color: gainsboro;
+
+}
+
+.info span {
+	color: brown;
+
+}
+
+.contact span {
+	color: brown;
+
+}
+
+.company span {
+	color: brown;
+
+}
+
+.navbar-nav > li > a.active{
+	color: brown;
+	font-size: 18px;
+}
+
+.navbar-nav a:hover {
+	color: brown;
+	text-decoration: none;
+}
+
+.navbar-nav > li > a:active {
+	color: blue;
+	text-decoration: none;
+}
+
+
+.NoiDung.text {
+	color: brown;
+}
+
+h1 {
+	text-align: center;
+	color: #777;
+	padding-bottom: 20px;
+}
+
+h2 {
+	color: brown;
+	text-align: center;
+}
+
+h3 {
+	color: brown;
+	text-align: center;
+}
+
+.row {
+	padding: 0;
+	margin: 0;
+
+}
+
+
+.row img {
+	padding-top: 20px;
+	text-align: center;
+
+}
+
+.sanpham img:hover {
+	transform: translate(0, -5px)
+}
+
+span {
+	text-align: center;
+}
+
+img.img-responsive {
+	padding-top: 30px;
+}
+
+
+.title {
+	text-align: center;
+	font-weight: bold;
+	font-family: monospace;
+}
+
+.box {
+	max-width: 100%;
+	padding-left: 15px;
+	border: 1px solid gainsboro;
+	border-top-width: 5px;
+}
+
+
+
+
+.info {
+	border-color: gainsboro;
+	border-bottom: 2px solid gainsboro;
+}
+
+.contact {
+	border-color: gainsboro;
+	border-bottom: 2px solid gainsboro;
+}
+
+.company {
+	border-color: gainsboro;
+	border-bottom: 2px solid gainsboro;
+}
+
+
+.spantext {
+	padding: 5px;
+	width: 100%;
+}
+
+.spantext input {
+	width: 72%;
+	float: right;
+	border: 1px solid gainsboro;
+}
+
+textarea {
+	width: 100%;
+	height: 150px;
+	float: right;
+	border: 1px solid gainsboro;
+}
+
+span {
+	color: brown;
+}
+
+#maincontent {
+	height: 700px;
+}
+
+.sendButton {
+	padding-bottom: 7px;
+	padding-top: 156px;
+}
+
+.left-box {
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+
+@media (max-width:768px) {
+	#backtop {
+		display: none;
+	}
+}
+
+@media (min-width:1440px) {
+	#callButton {
+		display: none;
+	}
+}
+
+@media(min-width:1366px) {
+	.left-box {
+		float: left;
+		margin-left: 10%;
+	}
+
+	.right-box {
+		float: right;
+		margin-right: 10%;
+	}
+}
+
+.Login {
+	position: fixed;
+	left: 50%;
+	top: 40%;
+	-moz-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translateX(-50%) translateY(-50%);
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-o-transform: translateX(-50%) translateY(-50%);
+	transform: translateX(-50%) translateY(-50%);
+	z-index: 1050;
+	width: 80%;
+	border-radius: 6px;
+}
+
+.close {
+	position: absolute;
+	right: 20px;
+	top: 0;
+}
+
+.modal-backdrop {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1040;
+	background-color: #000;
+	display: none;
+}
+
+.navbar{
+    max-width: 1500px;
+	margin: auto;
+	background: white;
+  }
+
+@media (max-width:500px) { 
+    #banner {
+        display: none;
+    }
+}

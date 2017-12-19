@@ -1,0 +1,245 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bai Tap Form-result</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: inherit;
+
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            max-width: 1500;
+            margin: auto;
+            background: gainsboro;
+            height: 850px;
+
+        }
+
+        .loginForm {
+            padding-top: 40px;
+            width: 100%;
+            height: 140px;
+            border: 1px solid grey;
+
+        }
+
+        .left {
+            float: left;
+            width: 40%;
+            height: 80px;
+            padding-left: 80px;
+        }
+
+        .right {
+            float: right;
+            width: 40%;
+            height: 80px;
+            position: relative;
+        }
+
+        .title {
+            float: left;
+            width: 33.330%;
+            padding-right: 30px;
+            position: relative;
+            height: 41px;
+        }
+
+        .remember {
+            float: left;
+            width: 33.330%;
+            padding-right: 30px;
+            position: relative;
+            height: 41px;
+            padding-top: 5px;
+        }
+
+        .remember a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        .title input {
+            width: 100%;
+            height: 24px;
+            padding: 0;
+            border: 1px solid grey;
+            font-size: 16px;
+
+        }
+
+        #loginButton {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 24px;
+            background: whitesmoke;
+        }
+
+        #loginButton:hover {
+            opacity: 0.8;
+        }
+
+        .content {
+            height: 850px;
+            background: whitesmoke;
+            padding-top: 30px
+        }
+
+        .register {
+            width: 40%;
+            float: right;
+            height: 800px;
+            padding-top: 50px;
+        }
+
+        .row {
+            width: 480px;
+            float: left;
+            padding-bottom: 20px;
+        }
+
+        .register input {
+            height: 30px;
+            width: 100%;
+            border: 1px solid grey;
+            font-size: 20px;
+        }
+
+        .name {
+            float: left;
+            width: 46%;
+            position: relative;
+            height: 40px;
+        }
+
+        .sure {
+            float: right;
+        }
+
+        .info {
+            width: 40%;
+            height: 400px;
+            margin: auto;
+            padding-top: 50px;
+        }
+
+        .date {
+            width: 100%;
+            float: left;
+            font-size: 25px;
+        }
+
+        .date input {
+            width: 5%;
+            padding-top: 15px;
+        }
+
+        .gender {
+            width: 30%;
+
+        }
+
+        .gender input {
+            width: 15%;
+
+        }
+
+
+        select {
+            width: 18%;
+            height: 35px;
+            font-size: 18px;
+        }
+
+        .submitButton {
+            padding-top: 25px;
+        }
+
+        .submitButton input {
+            width: 270;
+            height: 50px;
+            border: 1px solid grey;
+            background: gainsboro;
+        }
+
+        .submitButton input:hover {
+            opacity: 0.9;
+        }
+
+        h1 {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='wrap'>
+        <div class="loginForm">
+            <div class="left">
+                <a href="index.html">
+                    <img src="http://www.moy.media/wp-content/uploads/2017/07/Website-Logo-5.png" />
+                </a>
+
+            </div>
+            <div class="right">
+                <form>
+                    <div class="title">
+                        <label for="emailLogin">Email</label>
+                        <input type="text" id="emailLogin" name="emailLogin" />
+                    </div>
+                    <div class="title">
+                        <label for="passwordLogin">Password</label>
+                        <input type="password" id="passwordLogin" name="passwordLogin" />
+                    </div>
+                    <div class="title Login">
+                        <input type="submit" value="Login" id="loginButton"></input>
+                    </div>
+                    <div class="Remember">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me?</label>
+                        </input>
+                    </div>
+                    <div class="Remember">
+                        <a href="#">Forgot your password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1>Register Successfully</h1>
+            <div class="info"></div>
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+
+       function myFuction(){
+            var uri = window.location.search.substring(1);         
+            var parms = uri.split('&');
+            for (var i = 0; i < parms.length; i++) {
+                var newParms = parms[i].replace('=',': ').replace('%40', '@').replace('+', ' ')
+                $('.info').append('<h2>' + newParms + '</h2>');
+            }
+        }
+        myFuction();
+
+
+
+
+    </script>
+</body>
+
+</html>

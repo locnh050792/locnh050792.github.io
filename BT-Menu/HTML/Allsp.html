@@ -1,0 +1,368 @@
+	<html>
+	   <head>
+		  <title>Bai Tap MENU</title>
+		  <style>
+			 *{
+			 box-sizing: border-box;
+			 }
+			 body {
+			 background-image: url();	
+			 margin: 0;
+			 padding: 0;
+			 background: whitesmoke;
+				 font-family: monospace;
+			 }
+			 .wrap {
+			 max-width: 1500px;
+			 margin: auto;
+			 padding: auto;
+			 background: whitesmoke;
+				 height: 3950px;
+			 }
+			 #banner {
+			 max-width: 1500px;
+			 margin: auto;
+			 padding: auto;
+			 }
+			 #backtop{
+			 position: fixed;
+			 bottom: 20px;
+			 right: 30px;
+			 }
+			 ul li {
+			 list-style-type: none;
+			 }
+			 ul {
+			 margin: 0;
+			 padding: 0;
+			 }
+			 #menu {
+			 background: gainsboro;
+			 margin: 0px auto;
+			 height: 50px;
+			 font-family: monospace;
+			 }
+			 #menu > ul > li {
+			 float: left;
+			 }
+			 #menu > ul > li > a {
+			 text-decoration: none;
+			 color: brown;
+			 line-height: 40px;
+			 display: block;
+			 padding: 0 190px 0 91px;
+			 font-size: 20px;
+			 font-weight: bold;
+			 }
+			 #menu > ul > li > a:hover {
+			 }
+			 #menu > ul > li:hover ul {
+			 display: block;
+			 }
+			 #menu > ul > li >ul {
+			 display: none;
+			 width: 270px;
+			 }
+			 #menu > ul > li ul a {
+			 display: block;
+			 line-height: 40px;
+			 color: brown;
+			 border-bottom: 1px solid black;
+			 text-align: center;
+			 text-decoration: none;
+			 font-size: 19px;
+			 font-weight: bold;
+			 background: gainsboro;
+			 }
+			 .NoiDung {
+			 max-width: 1500px;
+			 height: 500px;
+			 }
+			 .NoiDung span {
+			 font-style: italic;
+			 font-size: 20px;
+			 }
+			 .text {
+			 float: left;
+			 width: 30%;
+			 padding: 10px;
+			 }
+			 .anh{
+			 width: 70%;
+			 float: right;
+			 }
+			 .imageintro img {
+			 float: left;
+			 }
+			 .sanpham{
+			 padding: 0;
+			 margin: 0;
+			 height: 2400px;
+			 }
+			 .row1 img {
+			 transition: all 0.5 linear;
+			 overflow: hidden;
+			 }
+			 .row1 img:hover {
+			 transform: scale(1.1);
+			 }
+			 .row2 img {
+			 transition: all 0.5 linear;
+			 overflow: hidden;
+			 }
+			 .row2 img:hover {
+			 transform: scale(1.1);
+			 }
+			 .row1 {
+			 float: left;
+			 padding-top: 5px;
+			 margin: 0px;
+				height: 700px;
+				 text-align: center;
+			 }
+
+				 .row2 {
+			 float: left;
+			 padding-top: 5px;
+			 margin: 0px;
+				height: 800px;
+				 text-align: center;
+			 }
+
+			 .row1 img{
+			 padding: 10px;	
+			 }
+
+
+			  .price {
+				  color: brown;
+				  font-style: italic;
+			  }
+
+			 .title {
+			 text-align: center;
+			 font-weight: bold;
+			 font-family: monospace;
+			 padding-top: 96px;
+				padding-bottom: 100px;
+			 }
+			 .lienhe {
+			 height: 400px;
+			 }
+			 .box {
+			 border : 1px solid gainsboro;
+			 border-top-width: 5px;
+			 float : left;
+			 width : 33.3333333%;
+			 padding: 20px;
+			 }
+			 .info {
+			 border-color: gainsboro;
+			 }
+			 .contact {
+			 border-color: gainsboro;
+			 }
+			 .company {
+			 border-color: gainsboro;
+			 }
+			 .info span {
+			 color : brown;	
+			 }
+			 .contact span {
+			 color : brown;	
+			 }
+			 .company span {
+			 color : brown;	
+			 }
+
+			  .lienhe a:link {
+				  color: black;
+				  text-decoration: none;
+			  }
+				.lienhe a:hover {
+				  color: black;
+				  text-decoration: none;
+			  }
+				.lienhe a:active {
+				  color: black;
+				  text-decoration: none;
+			  }
+				.lienhe a:visited {
+				  color: black;
+				  text-decoration: none;
+			  }
+		  </style>
+	   </head>
+	   <body>
+		  <div class="wrap">
+			 <div>
+				<img id="banner" src="../img/banner2.jpg" />
+			 </div>
+			 <div id="maincontent" style="height: 3500px; ">
+				<div id="menu">
+				   <ul  >
+					  <li><a href="index.html"> Trang Chủ </a></li>
+					  <li>
+						 <a href="Allsp.html"> Sản Phẩm</a>
+						 <ul>
+							<li>
+							   <a href="CafeXay.html">Cafe Xay</a>
+							</li>
+							<li>
+							   <a href="MayCafe.html">Máy Pha Cafe</a>
+							</li>
+							<li>
+							   <a href="Allsp.html">Tất Cả Sản Phẩm</a>
+							</li>
+						 </ul>
+					  </li>
+					  <li>
+						 <a href="KM-TT-HT.html"> Tin Tức </a>
+						 <ul>
+							<li>
+							   <a href="KM-TT-HT.html#KM">Khuyến Mại</a>
+							</li>
+							<li>
+							   <a href="KM-TT-HT.html#TT">Thông Tin Công Ty</a>
+							</li>
+							<li>
+							   <a href="KM-TT-HT.html#TD">Tuyển Dụng</a>
+							</li>
+						 </ul>
+					  </li>
+					  <li><a href="LienHe.html"> Liên Hệ </a></li>
+				   </ul>
+				</div>
+
+
+
+				<div class="sanpham">
+				   <div class="title">
+					  <h1 >&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+					  <h1 ><span>Sản Phẩm</span></h1>
+				   </div>
+				   <div class="sanpham row1">
+					  <a href="SPCafeXay2.html"><img src="../img/anh2.png" /></a>
+
+						<div  class="price">
+								<h1>Bella Aurora</h1>
+								<h2>NICARAGUA</h2>
+								<h2>$14</h2>		
+						</div>
+
+					</div>
+					 <div class="sanpham row1">
+					  <a href="SPCafeXay3.html"><img src="../img/anh3.png" /></a>
+						 <div  class="price">
+								<h1>Mr. David Mburu</h1>
+								<h2>KENYA</h2>
+								<h2>$15</h2>	
+						</div>
+					   </div>
+
+
+						 <div class="sanpham row1">
+					  <a href="SPCafeXay4.html"><img src="../img/anh4.png" /></a>
+						 <div  class="price">
+								<h1>Las Capucas</h1>
+								<h2>HONDURAS</h2>
+								<h2>$14.5</h2>
+						</div>
+					   </div>
+
+
+						 <div class="sanpham row1">
+					  <a href="SPCafeXay5.html"><img src="../img/anh5.png" /></a>
+						 <div  class="price">
+								<h1>Decaf Altura San Ramon</h1>
+								<h2>COSTA RICA</h2>
+								<h2>$15</h2>	
+						</div>
+					   </div> 
+
+					<div class="sanpham row1">
+					  <a href="SPCafeXay6.html"><img src="../img/anh6.png" /></a>
+						 <div  class="price">
+								<h1>Los Nacientes</h1>
+								<h2>COSTA RICA</h2>
+								<h2>$14.50</h2>	
+						</div>
+					   </div>
+
+						<div class="sanpham row1">
+					  <a href="SPCafeXay7.html"><img src="../img/anh7.png" /></a>
+						 <div  class="price">
+								<h1>Robinson Figueroa</h1>
+								<h2>COLOMBIA</h2>
+								<h2>$14</h2>
+						</div>
+					   </div>
+
+							<div class="sanpham row1">
+					  <a href="SPMayCafe3.html"><img src="../img/anhmaycafe3.png" /></a>
+						 <div  class="price">
+								<h1>Faberware</h1>
+								<h2>USA</h2>
+								<h2>$350</h2>
+						</div>
+					   </div>
+
+						<div class="sanpham row1">
+					  <a href="SPMayCafe4.html"><img src="../img/anhmaycafe4.png" /></a>
+						 <div  class="price">
+								<h1>Faberware</h1>
+								<h2>USA</h2>
+								<h2>$400</h2>
+						</div>
+					   </div>
+
+							<div class="sanpham row1">
+					  <a href="SPMayCafe5.html"><img src="../img/anhmaycafe5.png" /></a>
+						 <div  class="price">
+								<h1>Okka</h1>
+								<h2>Japan</h2>
+								<h2>$800</h2>
+						</div>
+					   </div>
+
+
+				 </div>
+				   <div class="sanpham row2">
+					  <a href="SPMayCafe1.html">	<img src="../img/anhmaycafe1.png" /></a>
+										 <div  class="price">
+								<h1>Morris</h1>
+								<h2>Itali</h2>
+								<h2>$500</h2>
+						</div>
+					   </div>
+
+
+
+
+				<div class="sanpham row2">
+					  <a href="SPMayCafe2.html">	<img src="../img/anhmaycafe2.png" /></a>
+										 <div  class="price">
+								<h1>DeLonghi</h1>
+								<h2>China</h2>
+								<h2>$100</h2>
+					</div>
+					</div>
+
+
+			  </div>
+				<p style="text-align:center;">&#174; copyright 2017 ABC coffee Ltd. </p>
+		   </div>   
+
+
+
+
+
+
+
+
+
+		  <div id="backtop">
+			 <a href="#banner"  ><img src="../img/back-to-top.png" width="80px" title="BackToTop" alt="Back To Top" /></a>
+		  </div>
+	   </body>
+	</html>

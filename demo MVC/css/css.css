@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+body{
+    max-width: 1000px;
+    margin: auto;
+}
+
+#list{
+    float: left;
+    width: 10%;
+}
+#image{
+    float: right;
+    width: 50%;
+}
+
+li{
+    padding: 15px;
+}
+
+img{
+    max-height: 200px;
+    max-width: 200px;
+}

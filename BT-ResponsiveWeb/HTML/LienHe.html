@@ -1,0 +1,449 @@
+<html>
+
+<head>
+    <title>Bai Tap MENU</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Maven Pro', sans-serif;
+            font-size: 18px;
+        }
+
+        body {
+            background-image: url();
+            margin: 0;
+            padding: 0;
+            background: whitesmoke;
+            font-family: 'Maven Pro', sans-serif;
+            font-size: 18px;
+        }
+
+        .wrap {
+            max-width: 1500px;
+            margin: auto;
+            padding: auto;
+            background: white;
+        }
+
+        #banner {
+
+            margin: 0;
+            padding: 0;
+        }
+
+        #backtop {
+            position: fixed;
+            bottom: 20px;
+            right: 10px;
+        }
+
+        #Call {
+            position: fixed;
+            bottom: 20px;
+            left: 5px;
+
+        }
+
+
+        .NoiDung span {
+            font-style: italic;
+        }
+
+        .imageintro img {
+            float: left;
+        }
+
+        .sanpham {
+            padding: 0;
+            margin: 0;
+            max-height: 1500px;
+        }
+
+        .title {
+            text-align: center;
+            font-weight: bold;
+            font-family: monospace;
+
+        }
+
+        .lienhe {
+            height: 400px;
+        }
+
+        .info {
+            border-color: gainsboro;
+            border-bottom: 2px solid gainsboro;
+        }
+
+        .contact {
+            border-color: gainsboro;
+        }
+
+        .company {
+            border-color: gainsboro;
+
+        }
+
+        .info span {
+            color: brown;
+
+        }
+
+        .contact span {
+            color: brown;
+
+        }
+
+        .company span {
+            color: brown;
+
+        }
+
+        .lienhe a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        .lienhe a:hover {
+            color: black;
+            text-decoration: none;
+        }
+
+        .lienhe a:active {
+            color: black;
+            text-decoration: none;
+        }
+
+        .lienhe a:visited {
+            color: black;
+            text-decoration: none;
+        }
+
+        a:link {
+            color: black;
+
+        }
+
+        a:hover {
+            color: black;
+
+        }
+
+        a:active {
+            color: black;
+
+        }
+
+        a:visited {
+            color: black;
+
+        }
+
+        .NoiDung.text {
+            color: brown;
+        }
+
+        h1 {
+            text-align: center;
+            color: #777;
+            padding-bottom: 20px;
+        }
+
+        h2 {
+            color: brown;
+            text-align: center;
+        }
+
+        h3 {
+            color: brown;
+            text-align: center;
+        }
+
+        .row {
+            padding: 0;
+            margin: 0;
+            height: 525px;
+        }
+
+
+        .row img {
+            padding-top: 20px;
+            text-align: center;
+
+        }
+
+        .sanpham img:hover {
+            transform: translate(0, -5px)
+        }
+
+        span {
+            text-align: center;
+        }
+
+
+
+
+        img.img-responsive {
+            padding-top: 30px;
+        }
+
+
+        .title {
+            text-align: center;
+            font-weight: bold;
+            font-family: monospace;
+        }
+
+        .box {
+            max-width: 100%;
+            padding-left: 15px;
+            border: 1px solid gainsboro;
+            border-top-width: 5px;
+        }
+
+
+
+
+        .info {
+            border-color: gainsboro;
+            border-bottom: 2px solid gainsboro;
+        }
+
+        .contact {
+            border-color: gainsboro;
+            border-bottom: 2px solid gainsboro;
+        }
+
+        .company {
+            border-color: gainsboro;
+            border-bottom: 2px solid gainsboro;
+        }
+
+
+        .spantext {
+            padding: 5px;
+            width: 100%;
+        }
+
+        .spantext input {
+            width: 72%;
+            float: right;
+            border: 1px solid gainsboro;
+        }
+
+        textarea {
+            width: 100%;
+            height: 150px;
+            float: right;
+            border: 1px solid gainsboro;
+        }
+
+        span {
+            color: brown;
+        }
+
+        #maincontent {
+            height: 800px;
+        }
+
+        .sendButton {
+            padding-bottom: 7px;
+            padding-top: 156px;
+        }
+
+
+
+        @media (max-width:768px) {
+            #backtop {
+                display: none;
+            }
+        }
+
+        @media (min-width:1440px) {
+            #callButton {
+                display: none;
+            }
+        }
+
+        @media(min-width:1366px) {
+            .left-box {
+                float: left;
+                margin-left: 10%;
+            }
+
+            .right-box {
+                float: right;
+                margin-right: 10%;
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="container-fluid">
+            <div>
+                <img id="banner" src="../img/banner2.jpg" class="img-responsive" />
+            </div>
+            <div id="maincontent">
+                <header>
+
+                    <nav class="navbar navbar-default">
+                        <div class="container-fluid">
+                            <!-- Brand and toggle get grouped for better mobile display -->
+                            <div class="navbar-header">
+                                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                                    aria-expanded="false">
+                                    <span class="sr-only">Toggle navigation</span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                                <a class="navbar-brand" href="index.html">Home</a>
+                            </div>
+
+                            <!-- Collect the nav links, forms, and other content for toggling -->
+                            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                                <ul class="nav navbar-nav">
+                                    <li>
+                                        <a href="KM-TT-HT.html">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="Allsp.html">Products
+                                            <span class="sr-only">(current)</span>
+                                        </a>
+                                    </li>
+
+                                    <li>
+                                        <a href="#"> Contact Us</a>
+                                    </li>
+
+                                </ul>
+                                <ul class="nav navbar-nav navbar-right">
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-user"></span> Sign Up</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-log-in"></span> Login</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- /.navbar-collapse -->
+                        </div>
+                        <!-- /.container-fluid -->
+                    </nav>
+                </header>
+
+
+                <div class="lienhe">
+                    <div class="title">
+                        <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+                        <a href="LienHe.html#button">
+                            <h1>Liên Hệ</h1>
+                        </a>
+                    </div>
+                    <section>
+                        <div class="row">
+                            <div class="col-xs-12 col-ms-12 col-md-12 col-lg-4 box left-box">
+
+                                <div class="info">
+                                    <h2>Thông tin cơ bản</h2>
+                                    <div>
+                                        <span>Công ty ABC coffee Việt Nam</span>
+                                    </div>
+                                    <div>
+                                        <span>Chi nhánh Hà Nội </span>
+                                    </div>
+                                    <div>
+                                        <span>Thành Lập 2017</span>
+                                    </div>
+                                </div>
+                                <div class="info">
+                                    <h2>Thông tin liên hệ</h2>
+                                    <div>
+                                        <span>Địa Chỉ : Hà Nội - Việt Nam</span>
+                                    </div>
+                                    <div>
+                                        <span>Gmail : infoABC@gmail.com</span>
+                                    </div>
+                                    <div>
+                                        <span>Điện Thoại : 19001900</span>
+                                    </div>
+                                </div>
+                                <div class="">
+                                    <h2>Thời gian làm việc</h2>
+                                    <div>
+                                        <span>Thứ 2 tới thứ 6: 6h:00 - 22:30</span>
+                                    </div>
+                                    <div>
+                                        <span>Thứ 7: 7h:00 - 22h:30</span>
+                                    </div>
+                                    <div>
+                                        <span>Chủ nhật: 7h:00 - 12:00</span>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+                            <div class="col-xs-12 col-ms-12 col-md-12 col-lg-4 box right-box">
+
+                                <h3>Ý Kiến Phản Hồi</h3>
+                                <div class="spantext">
+                                    <span>Họ Tên :</span>
+                                    <input type="text" class="textinput" />
+                                    <br/>
+                                </div>
+                                <div class="spantext">
+                                    <span>Địa chỉ :</span>
+                                    <input type="text" class="textinput" />
+                                    <br/>
+                                </div>
+                                <div class="spantext">
+                                    <span>Phone :</span>
+                                    <input type="text" class="textinput" />
+                                    <br/>
+                                </div>
+                                <div class="spantext">
+                                    <span>Email :</span>
+                                    <input type="text" class="textinput" />
+                                    <br/>
+                                </div>
+                                <div>
+                                    <span class="spantext">Ý Kiến Phản Hồi :</span>
+                                    <textarea></textarea>
+                                </div>
+                                <div class="sendButton">
+                                    <button id="button" type="button" class="btn btn-primary">Send</button>
+                                </div>
+
+                            </div>
+                        </div>
+                    </section>
+
+
+
+
+                    <p style="text-align:center;">&#174; copyright 2017 ABC coffee Ltd. </p>
+                </div>
+            </div>
+            <div id="backtop">
+                <a href="#banner">
+                    <img src="../img/back-to-top.png" title="BackToTop" alt="Back To Top" class="img-responsive" />
+                </a>
+            </div>
+            <div id="Call">
+                <a href="">
+                    <img src="../img/call.png" title="Call Now" alt="Call Now" class="img-responsive" id="callButton" />
+                </a>
+            </div>
+</body>

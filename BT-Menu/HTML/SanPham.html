@@ -1,0 +1,284 @@
+<html>
+<head>
+	<title>Bai Tap MENU</title>
+	<link rel="stylesheet" href="Menu.css"/>
+	<style>
+		*{
+			box-sizing: border-box;
+		}
+		
+		body {
+			background-image: url();	
+			margin: 0;
+			padding: 0;
+			background: whitesmoke;
+		}
+
+		.wrap {
+			max-width: 1500px;
+			margin: auto;
+			padding: auto;
+			background: whitesmoke;
+
+		}
+
+		#banner {
+			max-width: 1500px;
+			margin: auto;
+			padding: auto;
+			
+		}
+
+		#backtop{
+			position: fixed;
+			bottom: 20px;
+			right: 30px;
+		}
+
+		
+		ul li {
+			list-style-type: none;
+			
+		}
+		
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		#menu {
+			background: gainsboro;
+			margin: 0px auto;
+			height: 50px;
+			font-family: monospace;
+			
+		}
+		#menu > ul > li {
+			float: left;
+		}
+		
+		#menu > ul > li > a {
+			text-decoration: none;
+			color: brown;
+			line-height: 40px;
+			display: block;
+			padding: 0 190px 0 91px;
+			font-size: 20px;
+			font-weight: bold;
+			
+
+		}
+
+		#menu > ul > li > a:hover {
+			
+		}
+		#menu > ul > li:hover ul {
+			display: block;
+		}
+
+		#menu > ul > li >ul {
+			display: none;
+			width: 270px;
+		}
+
+		#menu > ul > li ul a {
+			display: block;
+			line-height: 40px;
+			color: brown;
+			border-bottom: 1px solid black;
+			text-align: center;
+			text-decoration: none;
+			font-size: 19px;
+			font-weight: bold;
+			background: gainsboro;
+
+
+		}
+
+
+		.NoiDung {
+			max-width: 1500px;
+			height: 2500px;
+		}
+
+		.NoiDung span {
+			font-style: italic;
+			font-size: 20px;
+		}
+
+		.text {
+			float: left;
+			width: 30%;
+			padding: 10px;
+		}
+
+		.anh{
+			width: 70%;
+			float: right;
+		}
+
+		.imageintro img {
+			float: left;
+		}
+
+		.sanpham{
+			padding: 0;
+			margin: 0;
+			max-height: 1500px;
+
+			
+		}
+
+		.row1 img {
+			transition: all 0.5 linear;
+			overflow: hidden;
+		}
+
+		.row1 img:hover {
+			transform: scale(1.1);
+			
+		}
+
+
+		.row2 img {
+			transition: all 0.5 linear;
+			overflow: hidden;
+		}
+
+		.row2 img:hover {
+			transform: scale(1.1);
+		
+		}
+
+		.row1 {
+			float: left;
+			padding:15px;
+			margin: 0px;
+			width: 40%;
+			height: 500px;
+
+		}
+
+		.row1 img{
+			padding: 10px;	
+		}
+
+
+		.row2 {
+			float: left;
+			padding: 0;
+			padding: 15px;
+			margin: 0px;
+			width: 60%;
+			height: 500px;
+		}
+
+		
+
+		.row {
+
+		}
+
+		.title {
+			text-align: center;
+			font-weight: bold;
+			font-family: monospace;
+			padding-top: 96px;
+			
+		}
+
+		.lienhe {
+			
+			height: 400px;
+		}
+
+		
+
+	
+
+	</style>
+	<head>
+		<body>
+			<div class="wrap">
+				<div>
+					<img id="banner" src="../img/banner2.jpg" />
+				</div>
+
+
+				<div id="maincontent">
+					<div id="menu"> 
+						<ul  >
+							<li><a href="index.html"> Trang Chủ </a></li>
+
+							<li><a href="SanPham.html"> Sản Phẩm</a>
+								<ul>
+									<li>
+										<a href="CafeXay.html">Cafe Xay</a>
+									</li>
+
+									<li>
+										<a href="MayCafe.html">Máy Pha Cafe</a>
+									</li>
+
+								</ul>
+							</li>	
+							<li>
+								<a href="KM-TT-HT.html"> Tin Tức </a>
+								<ul>
+									<li>
+										<a href="KM-TT-HT.html#KM">Khuyến Mại</a>
+									</li>
+
+									<li>
+										<a href="KM-TT-HT.html#TT">Thông Tin Cửa Hàng</a>
+									</li>
+									<li>
+										<a href="KM-TT-HT.html#TD">Tuyển Dụng</a>
+									</li>
+								</ul>
+							</li>
+
+							<li><a href="LienHe.html"> Liên Hệ </a></li>
+						</ul>
+					</div>
+					<div class="NoiDung">
+						<div class="title">
+							<h1 >&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+							<h1 ><span>Sản Phẩm</span></h1>
+						</div>
+						<div class="sanpham row">
+						<div class="sanpham row1">
+							<img src="../img/anh2.png" />
+						</div>
+						<div class="sanpham row2">
+							<h3>Coava</h3>
+						</div>	
+						</div>
+							<div class="sanpham row1">
+							<img src="../img/anh2.png" />
+						</div>
+						<div class="sanpham row2">
+							<h3>Coava</h3>
+							
+						</div>
+					</div>
+
+					
+
+
+				</div>
+			</div>
+
+
+
+
+
+
+			<div id="backtop">
+				<a href="#banner"  ><img src="../img/back-to-top.png" width="80px" title="BackToTop" alt="Back To Top" /></a>
+
+			</div>
+
+
+
+		</body>

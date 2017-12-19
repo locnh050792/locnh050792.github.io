@@ -1,0 +1,339 @@
+  <html>
+  <head>
+    <title>Bai Tap BOM</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        background: #3da1d1;
+        position: relative;
+      }
+
+      .container{
+        height: 360px;
+        width: 1000px;
+        position: relative;
+        top: 40%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        background: white;
+        border : 2px solid grey;
+      }
+
+      .title{
+        text-align: center;
+        font-size: 36px;
+        padding-top: 20px;
+        text-transform: uppercase;
+      }
+
+      .question{
+        padding: 20px;
+        margin: 20px;
+        font-size: 26px;
+        border: 1px solid grey;
+        border-radius: 50px;
+      }
+
+      .option:hover{
+        background: #DCDCDC;
+      }
+
+      .option{
+        width: 400px;
+        display: inline-block;
+        vertical-align: middle;
+        padding: 10px 50px 10px 30px;
+        margin :10px 7px 10px 10px;
+      }
+
+      .option input:checked .option{
+        background: #D3D3D3;
+        color: #D3D3D3; 
+      }
+
+      .next-btn{
+        width: 120px;
+        height:50px;
+        float: right;
+        padding: 5px;
+        border-radius: 10px;
+        border:none;
+        margin-right: 20px;
+        background: #D3D3D3;     
+        font-size: 14px;
+      }
+
+      .next-btn:hover{
+        transform: scale(1.1);
+      }
+
+      .back-btn{
+        width: 120px;
+        height:50px;
+        float: left;
+        border-radius: 10px;
+        border:none;
+        margin-left: 20px;
+        background: #D3D3D3;     
+        font-size: 14px;
+        position: absolute;
+        right: 48%;
+        bottom: 50%;
+      }
+
+      .back-btn:hover{
+        transform: scale(1.1);
+      }
+
+      .result{
+        height: 200px;
+        text-align: center;
+        font-size: 60px;
+        position: relative; 
+      }
+
+      p{
+        height: 0px;
+        text-align: center;
+        font-style: italic;
+        position: absolute;
+        right: 50%;
+        bottom: 6%;
+      }
+
+    .congrats {
+    position: absolute;
+    top: 140px;
+    width: 800px;
+    height: 150px;
+    padding: 20px 10px;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+  }
+
+  .congrats1 {
+    position: absolute;
+    top: 300px;
+    width: 800px;
+    height: 150px;
+    padding: 20px 10px;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+   
+  }
+
+    @keyframes example {
+    0%   {bottom:  0%;}
+    25%  {bottom:  15%;}
+    50%  {bottom:  30%;}
+    75%  {bottom:  15%;}
+    100% {bottom:  0%;}
+}
+
+
+  #Congratulations h1 {
+    transform-origin: 50% 50%;
+    font-size: 50px;
+    cursor: pointer;
+    z-index: 2;
+    position: absolute;
+    bottom:0;
+    text-align: center;
+    width: 100%;
+    color: white;
+    animation: example 2s linear;
+  }
+
+
+  @keyframes snow {
+    0% {
+      opacity: 0.8; width: 20%;
+    }
+    100% {
+      opacity: 1;width: 35%;
+    }
+  }
+
+  .stars {
+    font-family: Androgyne;
+    z-index: 1;
+    position: absolute;
+    top: 10px;
+    width: 550px;
+    height: 100px;
+    padding: 20px 10px;
+    text-align: center;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    animation: snow 3s linear infinite;
+  }
+
+  .stars img {
+    width: 20%;
+    float: left; 
+  }
+
+    </style>
+</head>
+<body>
+  <div id="quizContainer" class="container" >
+      <div class="title">Math Quiz</div>
+      <div id="question" class="question" ></div>
+      <label class="option"><input type="radio" name="option" value="1" /> <span id="opt1">></span></label>
+      <label class="option"><input type="radio" name="option" value="2" /> <span id="opt2"></span></label>
+      <label class="option"><input type="radio" name="option" value="3" /> <span id="opt3"></span></label>
+      <label class="option"><input type="radio" name="option" value="4" /> <span id="opt4"></span></label>
+      <p id="p"></p>
+      <div class="allButton">
+      <button id="nextButton" class="next-btn" onclick ="loadNextQuestion();">Next Question</button>  
+     </div>
+  </div>
+  <div id="result" class="container result" style="display: none;">
+  </div>
+  <button id="backButton" class="back-btn" style="display: none;" onclick="startAgain()">Start Again</button>
+  <div id="Congratulations" style="display: none;">
+    <div class="congrats">
+      <h1>Chúc Mừng</h1>
+      
+    </div>
+    <div class="congrats1">
+      <h1>Bạn Đã Trả Lời Đúng : 5/5</h1>
+      
+    </div>
+    <div class="stars">
+      <img src="star.png"/>
+      <img src="star.png"/>
+      <img src="star.png"/>
+      <img src="star.png"/>
+      <img src="star.png"/>
+    </div>
+  </div>  
+  
+  <script>
+    var questions = [
+      {
+        "question":"10 + 2 = ?",
+        "option1":"10",
+        "option2":"102",
+        "option3":"201",
+        "option4":"12",
+        "answer":"4"
+      },
+
+      {
+        "question":"200 x 10 = ?",
+        "option1":"2001",
+        "option2":"2210",
+        "option3":"2020",
+        "option4":"2000",
+        "answer":"4"
+      },
+
+      {
+        "question":"9 : 3 = ?",
+        "option1":"3",
+        "option2":"39",
+        "option3":"93",
+        "option4":"30",
+        "answer":"1"
+      },
+
+      {
+        "question":"2 + 2 : 2 = ?",
+        "option1":"2",
+        "option2":"3",
+        "option3":"4",
+        "option4":"5",
+        "answer":"2"
+      },
+
+      {
+        "question":"3 + 3 x 3 = ?",
+        "option1":"12",
+        "option2":"18",
+        "option3":"99",
+        "option4":"333",
+        "answer":"1"
+      },
+
+    ];
+    
+    var currentQuestion = 0;
+    var score = 0;
+    var totalQuestion = questions.length;
+
+    var container = document.getElementById('quizContainer');
+    var questionEl = document.getElementById('question');
+
+    var opt1 = document.getElementById('opt1');
+    var opt2 = document.getElementById('opt2');
+    var opt3 = document.getElementById('opt3');
+    var opt4 = document.getElementById('opt4');
+    var nextButton = document.getElementById('nextButton');
+    var result = document.getElementById('result');
+    var p = document.getElementById('p');
+    var backButton = document.getElementById('backButton')
+    var Congratulations = document.getElementById('Congratulations')
+
+    function loadQuestion(questionIndex){
+      q = questions[questionIndex];
+      question.innerHTML = q.question;
+      p.innerHTML = "Question " + (questionIndex + 1 ) + " of 5 ";
+      opt1.innerHTML = q.option1;
+      opt2.innerHTML = q.option2;
+      opt3.innerHTML = q.option3;
+      opt4.innerHTML = q.option4;
+    }
+
+    function loadNextQuestion(){
+      var selectedQuestion = document.querySelector('input[type=radio]:checked');
+      if (!selectedQuestion){
+        alert("Bạn phải chọn đáp án");
+        return;
+      }
+
+      var answer = selectedQuestion.value;
+      if(questions[currentQuestion].answer === answer){
+        score += 1;
+      }
+
+      selectedQuestion.checked = false;
+      currentQuestion++;
+
+      if(currentQuestion == totalQuestion - 1){
+        nextButton.textContent = "Finish";
+      }
+
+      if(currentQuestion == totalQuestion){
+        if(score < 5){
+          container.style.display = 'none';
+          result.style.display = "";
+          backButton.style.display = "";
+          result.textContent = "Rất tiếc bạn trả lời đúng " + score + "/5";
+          return;
+        }
+        else{
+          container.style.display = 'none';
+          Congratulations.style.display = "";  
+        }
+      }
+      loadQuestion(currentQuestion);
+    }
+
+    function startAgain(currentQuestion){
+      score = 0 ;
+      window.location.href = window.location.href;
+      loadQuestion(currentQuestion);
+    }
+
+    loadQuestion(currentQuestion);
+
+  </script>
+
+</body>
+</html> 

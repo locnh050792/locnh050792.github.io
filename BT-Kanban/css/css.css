@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+
+.ui-state-highlight{
+    background: red;
+}
+
+.material-icons{
+    float: right;
+}
+
+i.material-icons{
+    display: none;
+}
+
+.ui-state-highlight {
+     height: calc(1.5rem + 20px);
+     background: whitesmoke;
+}
+
+
+

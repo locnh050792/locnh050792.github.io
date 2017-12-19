@@ -1,0 +1,83 @@
+<html>
+
+<head>
+    <style>
+        body {
+            background-color: #333;
+			background-image: url('Merry-Christmas.jpg');
+			margin:auto;
+        }
+
+	
+		
+        #snow {
+            background: none;
+            font-family: Androgyne;
+            background-image: url('s1.png'), url('s2.png'), url('s3.png');
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            z-index: 1;
+            animation: snow 10s linear infinite;
+        }
+
+        @keyframes snow {
+            0% {
+                background-position: 0px 0px, 0px 0px, 0px 0px;
+            }
+            50% {
+                background-position: 500px 500px, 100px 200px, -100px 150px;
+            }
+            100% {
+                background-position: 500px 1000px, 200px 400px, -100px 300px;
+            }
+        }
+		
+		@keyframes fadeout {
+			         0% {opacity: 0  }               
+                    25%  { opacity: 1 }
+                    50%  { opacity: 0.5}
+                    75%  { opacity: 1}
+                    100% {opacity: 0 }
+		}
+  
+		
+	
+		#fadeout { 
+			max-height: 800px;
+			max-width: 800px;
+			animation: fadeout 8s ease infinite;
+			position: absolute;
+    		left: 500px;
+			
+		}
+		
+	
+	
+    </style>
+</head>
+
+<body>
+	<div >
+		<div id="snow">
+			
+		</div>
+		
+		<div>
+		
+		<img id="fadeout" src="santa.png"/>
+		
+		</div>
+		  
+	</div>
+	
+	<audio autoplay>
+		
+  	<source src="We-Wish-You-A-Merry-Christmas-Crazy-Frog.mp3" type="audio/mpeg">
+		
+	</audio>
+</body>
+
+</html>

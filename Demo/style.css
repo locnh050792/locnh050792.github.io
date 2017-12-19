@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+}
+
+.wrap{
+    max-width: 800px;
+    margin: auto;
+}
+
+h1{
+    background: silver;
+    font-size: 40px;
+}
+
+.title{
+    font-size: 30px;
+    border: 1px solid silver;
+    border-radius: 4%;
+    background: lightgray;
+    margin-top: 30px;
+    cursor: pointer;
+}
+
+.title:hover{
+    opacity: 0.8;
+}
+
+.describe{
+    background: whitesmoke;
+}
+
+.color-title{
+    background: darkblue;
+}
+
+.describe{
+    display: none;
+}

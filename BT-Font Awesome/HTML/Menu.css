@@ -1,0 +1,211 @@
+*{
+			box-sizing: border-box;
+		}
+		
+		body {
+			background-image: url();	
+			margin: 0;
+			padding: 0;
+			background: whitesmoke;
+		}
+
+		.wrap {
+			max-width: 1500px;
+			margin: auto;
+			padding: auto;
+			background: whitesmoke;
+
+		}
+
+		#banner {
+			max-width: 1500px;
+			margin: auto;
+			padding: auto;
+			
+		}
+
+		#backtop{
+			position: fixed;
+			bottom: 20px;
+			right: 30px;
+		}
+
+		
+		ul li {
+			list-style-type: none;
+			
+		}
+		
+		ul {
+			margin: 0;
+			padding: 0;
+		}
+
+		#menu {
+			background: gainsboro;
+			margin: 0px auto;
+			height: 50px;
+			font-family: monospace;
+			
+		}
+		#menu > ul > li {
+			float: left;
+		}
+		
+		#menu > ul > li > a {
+			text-decoration: none;
+			color: brown;
+			line-height: 40px;
+			display: block;
+			padding: 0 190px 0 91px;
+			font-size: 20px;
+			font-weight: bold;
+			
+
+		}
+
+		#menu > ul > li > a:hover {
+			
+		}
+		#menu > ul > li:hover ul {
+			display: block;
+		}
+
+		#menu > ul > li >ul {
+			display: none;
+			width: 270px;
+		}
+
+		#menu > ul > li ul a {
+			display: block;
+			line-height: 40px;
+			color: brown;
+			border-bottom: 1px solid black;
+			text-align: center;
+			text-decoration: none;
+			font-size: 19px;
+			font-weight: bold;
+			background: gainsboro;
+
+
+		}
+
+
+		.NoiDung {
+			max-width: 1500px;
+			height: 500px;
+		}
+
+		.NoiDung span {
+			font-style: italic;
+			font-size: 20px;
+		}
+
+		.text {
+			float: left;
+			width: 30%;
+			padding: 10px;
+		}
+
+		.anh{
+			width: 70%;
+			float: right;
+		}
+
+		.imageintro img {
+			float: left;
+		}
+
+		.sanpham{
+			padding: 0;
+			margin: 0;
+			max-height: 1500px;
+
+			
+		}
+
+		.row1 img {
+			transition: all 0.5 linear;
+			overflow: hidden;
+		}
+
+		.row1 img:hover {
+			transform: scale(1.1);
+			
+		}
+
+
+		.row2 img {
+			transition: all 0.5 linear;
+			overflow: hidden;
+		}
+
+		.row2 img:hover {
+			transform: scale(1.1);
+		
+		}
+
+		.row1 {
+			float: left;
+			padding-top: 5px;
+			margin: 0px;
+			
+
+		}
+
+		.row1 img{
+			padding: 10px;	
+		}
+
+
+		.row2 {
+			float: left;
+			padding: 0;
+		}
+
+		.title {
+			text-align: center;
+			font-weight: bold;
+			font-family: monospace;
+			padding-top: 96px;
+			
+		}
+
+		.lienhe {
+			
+			height: 400px;
+		}
+
+		.box {
+			border : 1px solid gainsboro;
+			border-top-width: 5px;
+			float : left;
+			width : 33.3333333%;
+			padding: 20px;
+
+
+		}
+
+		.info {
+			border-color: gainsboro;
+		}
+
+		.contact {
+			border-color: gainsboro;
+		}
+
+		.company {
+			border-color: gainsboro;
+		}
+
+		.info span {
+			color : brown;	
+		}
+
+		.contact span {
+			color : brown;	
+		}
+
+		.company span {
+			color : brown;	
+		}

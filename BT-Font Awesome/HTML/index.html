@@ -1,0 +1,434 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Bai Tap MENU</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro" >
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Maven Pro', monospace, sans-serif;
+    }
+
+    body {
+      background-image: url();
+      margin: 0;
+      padding: 0;
+      background: whitesmoke;
+
+    }
+
+    .wrap {
+      max-width: 1500px;
+      margin: auto;
+      padding: auto;
+      background: whitesmoke;
+    }
+
+    #banner {
+      max-width: 1500px;
+      margin: auto;
+      padding: auto;
+    }
+
+    #backtop {
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+    }
+
+    ul li {
+      list-style-type: none;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+    }
+
+    #menu {
+      background: gainsboro;
+      margin: 0px auto;
+      height: 50px;
+    }
+
+    #menu>ul>li {
+      float: left;
+    }
+
+    #menu>ul>li>a {
+      text-decoration: none;
+      color: brown;
+      line-height: 40px;
+      display: block;
+      padding: 0 190px 0 91px;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    #menu>ul>li>a:hover {}
+
+    #menu>ul>li:hover ul {
+      display: block;
+    }
+
+    #menu>ul>li>ul {
+      display: none;
+      width: 270px;
+    }
+
+    #menu>ul>li ul a {
+      display: block;
+      line-height: 40px;
+      color: brown;
+      border-bottom: 1px solid black;
+      text-align: center;
+      text-decoration: none;
+      font-size: 19px;
+      font-weight: bold;
+      background: gainsboro;
+    }
+
+    .NoiDung {
+      max-width: 1500px;
+      height: 500px;
+    }
+
+    .NoiDung span {
+      font-style: italic;
+      font-size: 20px;
+    }
+
+
+
+    .text {
+      float: left;
+      width: 30%;
+      padding: 10px;
+      color: brown;
+    }
+
+    .anh {
+      width: 70%;
+      float: right;
+    }
+
+    .imageintro img {
+      float: left;
+    }
+
+    .sanpham {
+      padding: 0;
+      margin: 0;
+      max-height: 1500px;
+    }
+
+    .row1 img {
+      transition: all 0.5 linear;
+      overflow: hidden;
+    }
+
+    .row1 img:hover {
+      transform: scale(1.1);
+
+    }
+
+    .row2 img {
+      transition: all 0.5 linear;
+      overflow: hidden;
+    }
+
+    .row2 img:hover {
+      transform: scale(1.1);
+    }
+
+    .row1 {
+      float: left;
+      padding-top: 5px;
+      margin: 0px;
+    }
+
+    .row1 img {
+      padding: 10px;
+    }
+
+    .row2 {
+      float: left;
+      padding: 40px;
+      margin: 0;
+    }
+
+    .row2 img {
+      padding: 10px;
+    }
+
+    .title {
+      text-align: center;
+      font-weight: bold;
+      font-family: monospace;
+      padding-top: 96px;
+    }
+
+    .lienhe {
+      height: 500px;
+    }
+
+    .box {
+      border: 1px solid gainsboro;
+      border-top-width: 5px;
+      float: left;
+      width: 33.3333333%;
+      padding: 20px;
+    }
+
+    .info {
+      border-color: gainsboro;
+    }
+
+    .contact {
+      border-color: gainsboro;
+    }
+
+    .company {
+      border-color: gainsboro;
+    }
+
+    .info span {
+      color: brown;
+      font-size: 20px;
+    }
+
+    .contact span {
+      color: brown;
+      font-size: 20px;
+    }
+
+    .company span {
+      color: brown;
+      font-size: 20px;
+    }
+
+    .lienhe a:link {
+      color: black;
+      text-decoration: none;
+    }
+
+    .lienhe a:hover {
+      color: black;
+      text-decoration: none;
+    }
+
+    .lienhe a:active {
+      color: black;
+      text-decoration: none;
+    }
+
+    .lienhe a:visited {
+      color: black;
+      text-decoration: none;
+    }
+
+    a:link {
+      color: black;
+
+    }
+
+    a:hover {
+      color: black;
+
+    }
+
+    a:active {
+      color: black;
+
+    }
+
+    a:visited {
+      color: black;
+
+    }
+
+    a {
+      text-decoration: none;
+    }
+
+    .NoiDung.text {
+      color: brown;
+    }
+
+    h1 {
+      padding-bottom: 30px;
+    }
+
+  
+
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div>
+      <img id="banner" src="../img/banner2.jpg" />
+    </div>
+    <div id="maincontent">
+      <div id="menu">
+        <ul>
+          <li>
+            <a href="index.html"> Trang Chủ </a>
+          </li>
+          <li>
+            <a href="Allsp.html"> Sản Phẩm</a>
+            <ul>
+              <li>
+                <a href="CafeXay.html">Cafe Xay</a>
+              </li>
+              <li>
+                <a href="MayCafe.html">Máy Pha Cafe</a>
+              </li>
+              <li>
+                <a href="Allsp.html">Tất Cả Sản Phẩm</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="KM-TT-HT.html"> Tin Tức </a>
+            <ul>
+              <li>
+                <a href="KM-TT-HT.html#KM">Khuyến Mại</a>
+              </li>
+              <li>
+                <a href="KM-TT-HT.html#TT">Thông Tin Công Ty</a>
+              </li>
+              <li>
+                <a href="KM-TT-HT.html#TD">Tuyển Dụng</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="LienHe.html"> Liên Hệ </a>
+          </li>
+        </ul>
+      </div>
+      <div class="NoiDung">
+        <div class="title">
+          <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+          <h1>Về Chúng Tôi &nbsp;
+            <i class="fa fa-heart" aria-hidden="true"></i>
+          </h1>
+        </div>
+        <div class="NoiDung text" style="color:brow;">
+          <span>
+            <i class="fa fa-quote-left fa-2x fa-pull-left fa-border" aria-hidden="true"></i>
+            <p>Từ những người đam mê cà phê:</p>
+            <p>Với niềm đam mê về thưởng thức cà phê, chúng tôi đã đi và trải nghiệm rất nhiều nền văn hóa về cà phê trên thế
+              giới và chúng tôi nghĩ rằng tại sao không tạo nên một nền văn hóa thưởng thức cà phê.</p>
+            <p> Đó là nơi giao thoa giữa văn hóa cà phê của các vùng trên thế giới. Chúng tôi đã du nhập những công nghệ tiên
+              tiến nhất trên thế giới để mang lại cho người tiêu dùng Việt Nam những tinh hoa tuyệt vời nhất về cà phê.</p>
+            <p>Giá trị của chúng tôi là mang đến cho khách hàng những ly cà phê sạch hảo hạng và thơm ngon nhất, chúng tôi mong
+              muốn đưa trải nghiệm về cà phê của khách hàng lên một tầm cao mới. </p>
+          </span>
+        </div>
+        <div class="NoiDung anh ">
+          <div class="NoiDung anh1">
+            <img src="../img/cafe1.jpg" />
+          </div>
+        </div>
+      </div>
+      <div class="sanpham">
+        <div class="title">
+          <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+          <h1>
+            <span>Sản Phẩm &nbsp;
+              <i class="fa fa-coffee" aria-hidden="true"></i>
+            </span>
+          </h1>
+        </div>
+        <div class="sanpham row1">
+          <a href="SPCafeXay2.html">
+            <img src="../img/anh2.png" />
+          </a>
+          <a href="SPCafeXay3.html">
+            <img src="../img/anh3.png" />
+          </a>
+          <a href="SPCafeXay4.html">
+            <img src="../img/anh4.png" />
+          </a>
+        </div>
+        <div class="sanpham row2">
+          <a href="SPMayCafe3.html">
+            <img src="../img/anhmaycafe3.png" />
+          </a>
+          <a href="SPMayCafe4.html">
+            <img src="../img/anhmaycafe4.png" /> </a>
+          <a href="SPMayCafe5.html">
+            <img src="../img/anhmaycafe5.png" /> </a>
+        </div>
+      </div>
+      
+        <a href="Allsp.html" style="padding :50px;">
+          <h1 id="TCSP" class="title" style="padding : 50px;">Tất cả sản phẩm &nbsp;
+            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+            </i>
+          </h1>
+        </a>
+    
+
+      <div>
+        <img src="../img/banner4.jpg" />
+      </div>
+      <div class="lienhe">
+        <div class="title">
+          <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+          <a href="LienHe.html#button">
+            <h1>Liên Hệ  &nbsp; <i class="fa fa-phone" aria-hidden="true"></i></h1>
+          </a>
+        </div>
+        <div class="box info">
+          <h2>Thông tin cơ bản</h2>
+          <div>
+            <span>Công ty ABC coffee Việt Nam</span>
+          </div>
+          <div>
+            <span>Chi nhánh Hà Nội </span>
+          </div>
+          <div>
+            <span>Thành Lập 2017</span>
+          </div>
+        </div>
+        <div class="box contact">
+          <h2>Thông tin liên hệ</h2>
+          <div>
+            <span>Địa Chỉ : Hà Nội - Việt Nam</span>
+          </div>
+          <div>
+            <span>Gmail : infoABC@gmail.com</span>
+          </div>
+          <div>
+            <span>Điện Thoại : 19001900</span>
+          </div>
+        </div>
+        <div class="box company">
+          <h2>Thời gian làm việc</h2>
+          <div>
+            <span>Thứ 2 tới thứ 6: 6h:00 - 22:30</span>
+          </div>
+          <div>
+            <span>Thứ 7: 7h:00 - 22h:30</span>
+          </div>
+          <div>
+            <span>Chủ nhật: 7h:00 - 12:00</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <p style="text-align:center;">&#174; copyright 2017 ABC coffee Ltd. </p>
+  </div>
+  <div id="backtop">
+    <a href="#banner">
+      <img src="../img/back-to-top.png" width="80px" title="BackToTop" alt="Back To Top" />
+    </a>
+  </div>
+</body>
+
+</html>

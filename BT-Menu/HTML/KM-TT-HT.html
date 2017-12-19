@@ -1,0 +1,341 @@
+<html>
+   <head>
+      <title>Bai Tap MENU</title>
+      <style>
+         *{
+         box-sizing: border-box;
+         }
+         body {
+         background-image: url();	
+         margin: 0;
+         padding: 0;
+         background: whitesmoke;
+         }
+         .wrap {
+         max-width: 1500px;
+         margin: auto;
+         padding: auto;
+         background: whitesmoke;
+         }
+         #banner {
+         max-width: 1500px;
+         margin: auto;
+         padding: auto;
+         }
+         #backtop{
+         position: fixed;
+         bottom: 20px;
+         right: 30px;
+         }
+         ul li {
+         list-style-type: none;
+         }
+         ul {
+         margin: 0;
+         padding: 0;
+         }
+         #menu {
+         background: gainsboro;
+         margin: 0px auto;
+         height: 50px;
+         font-family: monospace;
+         }
+         #menu > ul > li {
+         float: left;
+         }
+         #menu > ul > li > a {
+         text-decoration: none;
+         color: brown;
+         line-height: 40px;
+         display: block;
+         padding: 0 190px 0 91px;
+         font-size: 20px;
+         font-weight: bold;
+         }
+         #menu > ul > li > a:hover {
+         }
+         #menu > ul > li:hover ul {
+         display: block;
+         }
+         #menu > ul > li >ul {
+         display: none;
+         width: 270px;
+         }
+         #menu > ul > li ul a {
+         display: block;
+         line-height: 40px;
+         color: brown;
+         border-bottom: 1px solid black;
+         text-align: center;
+         text-decoration: none;
+         font-size: 19px;
+         font-weight: bold;
+         background: gainsboro;
+         }
+         .NoiDung {
+         max-width: 1500px;
+         height: 2900px;
+         }
+         .NoiDung span {
+         font-style: italic;
+         font-size: 20px;
+         }
+         .title {
+         text-align: center;
+         font-weight: bold;
+         font-family: monospace;
+         padding-top: 96px;
+         }
+          .box {
+         border : 1px solid gainsboro;
+         border-top-width: 5px;
+         border-bottom-width: 5px;
+	     margin-left: 25%;  
+         width : 50%;
+         padding: 20px;
+		 height: 220px;
+			  
+         }
+		  
+		 .box.info a:link {
+			color: black;
+    		text-decoration: none;
+			font-weight: bold;
+			 }
+		 .box.info a:hover {
+			color: black;
+    	
+			 }
+		   .box.info a:active {
+			color: black;
+    		
+			 }
+		 .box.info a:visited {
+			color: black;
+    	
+			 }
+        
+		  .row {
+			  padding-bottom: 50px;
+		  }
+        
+		  .boxspan {
+			  float: left;
+			  width: 70%;
+		  }
+		  
+		  .boximg{
+			  float: left;
+			  width: 30%;
+			  padding-top: 15px;
+		  }
+		  
+		  .mainThongtin {
+			  height: 600px;
+		  }
+		  
+		  .Thongtin{
+			  float: left;
+			  max-width: 50%;
+			  padding-left: 15%;
+			  margin: 0;
+			  text-align: left;
+		  }
+		  
+		   .Thongtin right{
+			  float: right;
+			  max-width: 50%;
+			  padding-right: 15%;
+			  margin: 0;
+			 
+		  }
+		  
+         span {
+         color : brown;	
+         }
+        
+		  
+      </style>
+      <head>
+   <body>
+      <div class="wrap">
+         <div>
+            <img id="banner" src="../img/banner2.jpg" />
+         </div>
+         <div id="maincontent">
+            <div id="menu">
+               <ul  >
+                  <li><a href="index.html"> Trang Chủ </a></li>
+                  <li>
+                     <a href="Allsp.html"> Sản Phẩm</a>
+                     <ul>
+                        <li>
+                           <a href="CafeXay.html">Cafe Xay</a>
+                        </li>
+                        <li>
+                           <a href="MayCafe.html">Máy Pha Cafe</a>
+                        </li>
+						  <li>
+                           <a href="Allsp.html">Tất Cả Sản Phẩm</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li>
+                     <a href="KM-TT-HT.html"> Tin Tức </a>
+                     <ul>
+                        <li>
+                           <a href="#KM">Khuyến Mại</a>
+                        </li>
+                        <li>
+                           <a href="#TT">Thông Tin Công Ty</a>
+                        </li>
+                        <li>
+                           <a href="#TD">Tuyển Dụng</a>
+                        </li>
+                     </ul>
+                  </li>
+                  <li><a href="LienHe.html"> Liên Hệ </a></li>
+               </ul>
+            </div>
+            <div class="NoiDung" >
+               <div class="title">
+                  <div id="KM">
+                     <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+                     <h1>Khuyến Mại</h1>
+                  </div>
+               </div>
+				<div class="row">
+                     <div class="box info">
+
+						 <div class="boximg">
+					<a href="SPCafeXay2.html"><img src="../img/anh2.png" width="70%"/></a>
+					</div>
+                  <div class="boxspan">
+					                    <h2>Khuyến Mại 15% Sản Phẩm Cafe Xay<br/> Bella Aurora </h2>
+					  <span> Chương Trình Khuyến Mại 15% Sản Phẩm Cafe Xay Bella Aurora Từ Ngày 10.10.2017 đến hết 20.10.2017 ...<br/> <a href="SPCafeXay2.html">Xem Sản Phẩm</a></span>
+					
+				</div>
+               </div>
+					
+               </div>
+             <div class="row">
+				  <div class="box info">
+
+						 <div class="boximg">
+							 <a href="SPcafeXay3.html"><img src="../img/anh3.png" width="70%"/></a>
+					</div>
+                  <div class="boxspan">
+					                      <h2>Khuyến Mại 10% Sản Phẩm Cafe Xay<br/> Mr.David MBuru </h2>
+					  <span> Chương Trình Khuyến Mại 15% Sản Phẩm Cafe Xay  Mr.David MBuru Từ Ngày 10.10.2017 đến hết 20.10.2017 ...<br/> <a href="SPcafeXay3.html">Xem Sản Phẩm</a></span>
+					
+				</div>
+               
+               </div>
+				</div>	
+				
+				  <div class="row">
+				  <div class="box info">
+
+						 <div class="boximg">
+							 <a href="SPCafeXay4.html"><img src="../img/anh4.png" width="70%"/></a>
+					</div>
+                  <div class="boxspan">
+					                    <h2>Khuyến Mại 30% Sản Phẩm Cafe Xay <br/> Las Capucas </h2>
+					  <span> Chương Trình Khuyến Mại 15% Sản Phẩm Cafe Xay Las Capucas Từ Ngày 10.10.2017 đến hết 20.10.2017 ...<br/> <a href="SPCafeXay4.html">Xem Sản Phẩm</a></span>
+					
+				</div>
+               
+               </div>
+            </div>
+				
+				  <div class="box info">
+
+						 <div class="boximg">
+					 <a href="SPMayCafe1.html"><img src="../img/anhmaycafe1.png" width="70%"/></a>
+					</div>
+                  <div class="boxspan">
+					            <h2>   Mua 1 Tặng 1 Các Sản Phẩm Máy Pha Cafe </h2>
+					  <span> Chương Trình Khuyến Mại Mua 1 Tặng 1 Các Sản Phẩm Máy Pha Cafe  Từ Ngày 10.10.2017 đến hết 20.10.2017 ... <br/><a href="SPMayCafe1.html">Xem Sản Phẩm</a></span>
+					
+				</div>
+               </div>
+				
+				  <div class="title">
+                  <div id="TT">
+					  <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+                     <h1>Thông Tin Công ty</h1>
+                     
+					  </div>
+					</div>
+					  <div class="mainThongtin">
+					  <div>
+					  <div class="Thongtin left">
+					<span>  Thương hiệu bắt nguồn từ cà phê Việt Nam :<br/><br/>
+ 
+ABC Coffee được sinh ra từ niềm đam mê bất tận với hạt cà phê Việt Nam. Bắt đầu với sản phẩm cà phê đóng gói tại Hà Nội vào năm 2000, chúng tôi đã nhanh chóng phát triển và mở rộng thành thương hiệu quán cà phê nổi tiếng và không ngừng mở rộng hoạt động trong và ngoài nước từ năm 2002.<br/><br/>
+ 
+Qua một chặng đường dài, chúng tôi đã không ngừng mang đến những sản phẩm cà phê thơm ngon, sánh đượm trong không gian thoải mái và lịch sự. Những ly cafe của chúng tôi không chỉ đơn thuần là thức uống quen thuộc mà còn mang trên mình một sứ mệnh văn hóa phản ánh một phần nếp sống hiện đại của người Việt Nam.<br/><br/>
+ 
+Đến nay, ABC Coffee vẫn duy trì khâu phân loại cà phê bằng tay để chọn ra từng hạt cà phê chất lượng nhất, rang mới mỗi ngày và phục vụ quý khách với nụ cười rạng rỡ trên môi.<br/><br/>
+Bí quyết thành công của chúng tôi là đây: cửa hàng tuyệt vời, sản phẩm tuyệt hảo và dịch vụ chu đáo với mức giá phù hợp!<br/>
+						</span>
+						 </div>
+						  </div>
+					  
+					  <div style="float:left ; padding-left:30px;">
+						  <div class="thongtinimg">
+					  	<img src="../img/TTimg.jpg"/>
+						</div>
+					  </div>
+					  
+					  </div>
+
+				
+				
+				  <div class="title">
+                  <div id="TD">
+                     <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+                     <h1>Tuyển Dụng</h1>
+                  </div>
+				</div>
+				 <div class="mainThongtin">
+					  <div>
+					  <div class="Thongtin left">
+					<span>  Khởi đầu sự nghiệp với ABC Coffee <br/><br/>
+Với sứ mạng trở thành hệ thống quán cà phê hàng đầu khu vực, ABC Coffee luôn tìm kiếm những ứng cử viên tiềm năng có đam mê và nỗ lực để vươn tới thành công.<br/><br/>
+Chúng tôi chào đón các bạn gia nhập vào đội ngũ chuyên nghiệp của gia đình chúng tôi.<br/><br/>
+Dù bạn chưa có kinh nghiệm làm việc hoặc đang phấn đấu cho vị trí quản lý cửa hàng, chúng tôi luôn biết cách lắng nghe bạn.<br/><br/>
+Dưới đây là danh sách những vị trí chúng tôi tìm kiếm:<br/><br/>
+Đội ngũ phục vụ (phục vụ, pha chế, thu ngân…)<br/><br/>
+Giám sát ca<br/><br/>
+Trợ lý quản lý<br/><br/>
+Trợ lý cửa hàng<br/><br/>
+Liên hệ ngay với chúng tôi.<br/><br/>
+						</span>
+						 </div>
+						  </div>
+					  
+					  <div style="float:left;">
+						  <div class="thongtinimg">
+					  	<img src="../img/TD.jpg"/>
+						</div>
+					  </div>
+					  
+					  </div>
+				
+				    </div>
+				
+				
+				
+				
+              </div>
+		   <p style="text-align:center;">&#174; copyright 2017 ABC coffee Ltd.</p>
+      </div>
+               
+    
+         
+ 
+      <div id="backtop">
+         <a href="#banner"  ><img src="../img/back-to-top.png" width="80px" title="BackToTop" alt="Back To Top" /></a>
+      </div>
+   </body>

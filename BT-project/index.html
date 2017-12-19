@@ -1,0 +1,355 @@
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="animation.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <style>
+        * {
+            font-family: 'Quicksand', sans-serif;
+            cursor: default;
+        }
+
+        body {
+            position: relative;
+        }
+
+        .icon {
+            float: right;
+        }
+
+        h1 {
+            color: white;
+
+        }
+
+        h2 {
+            color: white;
+
+        }
+
+        h3 {
+            text-align: center;
+            color: #0951bd;
+            font-weight: bold;
+        }
+
+        .student {
+            width: 40%;
+            float: left;
+            height: 200px;
+            max-width: 100%;
+        }
+
+        .student input {
+            height: 142px;
+            width: 100%;
+            color: #0951bd;
+            text-align: center;
+            font-size: 80px;
+            font-weight: bold;
+            background: white;
+            border: 0px solid white;
+        }
+
+        .pay {
+            width: 40%;
+            float: left;
+            height: 200px;
+            max-width: 100%;
+        }
+
+
+        .pay input {
+            height: 142px;
+            width: 100%;
+            color: #0951bd;
+            text-align: center;
+            font-size: 80px;
+            font-weight: bold;
+            background: white;
+            border: 0px solid white;
+        }
+
+        input:focus {
+            outline: none;
+        }
+
+        .box {
+            border: 1px solid gainsboro;
+            background: white;
+            float: left;
+        }
+
+        .arrow {
+            width: 20%;
+            float: left;
+            padding-top: 15%;
+
+        }
+
+        .arrow img {
+            width: 80%;
+            margin: auto;
+        }
+
+        ::placeholder {
+            color: #0951bd;
+        }
+
+        .right-info {
+            margin: auto;
+            float: right;
+            padding-top: 8%;
+            padding-bottom: 8%;
+            height: 40%;
+        }
+
+        .contact {
+            float: right;
+        }
+
+        .contact h1 {
+
+            font-weight: bold;
+            color: #0951bd;
+            float: left;
+        }
+
+        .info h1 {
+            font-size: 30px;
+            font-weight: bold;
+            color: #0951bd;
+
+        }
+
+        .phone {
+            float: left;
+        }
+
+        .number {
+            float: left;
+        }
+
+        .slide {
+            position: relative;
+            width: 100%;
+        }
+
+        .slide img {
+            position: absolute;
+            top: 0;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        a:active {
+            text-decoration: none;
+        }
+
+        #background {
+            position: absolute;
+            width: 100%;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        #trictan {
+            width: 100%;
+            height: 213px;
+            background: linear-gradient(to bottom right, #00afef 0%, #00afef 50%, white 50%, white 100%);
+        }
+
+        #retan {
+            width: 100%;
+            height: 380px;
+            background: #00afef;
+        }
+
+
+        @media screen and (min-width:1000px) {
+            header {
+                padding-top: 40px;
+            }
+            .apply {
+                padding-bottom: 65px;
+            }
+            .salary {
+                padding-bottom: 65px;
+            }
+            .info h1 {
+                font-size: 30px;
+                font-weight: bold;
+                color: #0951bd;
+                padding-top: 15%;
+            }
+        }
+
+
+        @media screen and (max-width:769px) {
+            * {
+                text-align: center;
+            }
+            .right-info {
+                display: none;
+            }
+            body {
+                font-size: 20px;
+            }
+
+            #TS {
+                display: none;
+            }
+            .pay {
+                height: 10%;
+            }
+            h1 {
+                font-size: 28px;
+            }
+            h2 {
+                font-size: 24px;
+            }
+            .info h1 {
+                font-size: 24px;
+                
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="background">
+        <div id="retan"></div>
+        <div id="trictan"></div>
+    </div>
+    <header class="container">
+        <div class="col-xs-5 col-sm-5 col-md-3">
+            <img src="logo.png" class="img-responsive" />
+        </div>
+        <div class="col-xs-5 col-sm-5 col-md-2 icon">
+            <img src="icon.png" class="img-responsive" />
+        </div>
+    </header>
+
+    <section class="container">
+        <div class="col-md-6 left-info">
+            <div class="apply">
+                <h1>Tuyển Dụng</h1>
+                <h1 style="font-weight:bold;" id="TS">Phụ Trách Tuyển Sinh</h1>
+            </div>
+
+            <div class="salary">
+                <h2 style="font-weight:bold;">Lương</h1>
+                    <h2>*(nhập số học viên ở dưới)</h2>
+            </div>
+            <div class="row">
+                <div class="student">
+                    <div class="box">
+                        <input type="text" placeholder="30" id="HocVien" value="" oninput="getSalary(this.value)" maxlength="3" />
+                        <h3>Học Viên</h3>
+                    </div>
+                </div>
+                <div class="arrow">
+                    <div class="">
+                        <img src="arrow.png" class="img-responsive" />
+                    </div>
+                </div>
+                <div class="pay">
+                    <div class="box">
+                        <input type="text" id="TienLuong" placeholder="13" disabled/>
+                        <h3>Triệu VNĐ</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-ms-12 col-md-5 right-info">
+            <div class="slide">
+                <img src="anh3.jpg" class="img-responsive " />
+                <img src="anh1.jpg" class="img-responsive " />
+                <img src="anh2.jpg" class="img-responsive " />
+            </div>
+        </div>
+    </section>
+
+    <footer class="container">
+        <div class="col-xs-12 col-ms-12 col-md-6 info">
+            <a href="mailto: cuong@techmaster.vn">
+                <h1 class="bounceOutRight">
+                    <i class="fa fa-envelope-o " aria-hidden="true"></i>
+                    CV gửi về : cuong@techmaster.vn
+                </h1>
+            </a>
+
+        </div>
+
+        <div class="col-xs-12 col-ms-12 col-md-5 contact">
+            <div class="phone">
+                <a href="tel:0902209011">
+                    <div class="phoneimg col-xs-4">
+                        <div class="phonering-alo-phone phonering-alo-green phonering-alo-show" id="phonering-alo-phoneIcon">
+                            <div class="phonering-alo-ph-circle"></div>
+                            <div class="phonering-alo-ph-circle-fill"></div>
+                            <a href="tel:+0902209011" class="pps-btn-img" title="Liên hệ">
+                                <div class="phonering-alo-ph-img-circle"></div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="number col-xs-8">
+                        <h1 class="number">0902209011</h1>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+
+    </footer>
+
+    <script>
+        function getSalary(val) {
+            var num = parseInt(val);
+            if (isNaN(num)) {
+
+            }
+            else if (num <= 1) {
+
+            }
+            else if (num >= 400) {
+
+            }
+            else {
+                var x = (2 * num) / (Math.log2(num));
+                $('#TienLuong').val(x.toFixed(1))
+            }
+        }
+
+        var img = $('.slide').children('img')
+        var count = 0;
+        img.eq(count).show();
+
+        setInterval(function () {
+            img.eq(count).fadeOut(1000);
+            count++;
+            img.eq(count).fadeIn(1000)
+            if (count == img.length) {
+                count = 0;
+                img.eq(count).fadeIn(1000)
+            }
+        }, 2500);
+    </script>
+
+</body>
+
+
+</html>

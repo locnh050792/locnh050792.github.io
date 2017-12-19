@@ -1,0 +1,381 @@
+<html>
+    <head>
+      <title>Bai Tap jQuery</title>
+      <style>
+        body {
+          font-family: sans-serif;
+          background: #3da1d1;
+          position: relative;
+        }
+  
+        .container{
+          height: 360px;
+          width: 1000px;
+          position: relative;
+          top: 40%;
+          left: 50%;
+          transform: translateX(-50%) translateY(-50%);
+          background: white;
+          border : 2px solid grey;
+        }
+  
+        .title{
+          text-align: center;
+          font-size: 36px;
+          padding-top: 20px;
+          text-transform: uppercase;
+        }
+  
+        .question{
+          padding: 20px;
+          margin: 20px;
+          font-size: 26px;
+          border: 1px solid grey;
+          border-radius: 50px;
+          text-align: center;
+        }
+  
+  
+        .option{
+          width: 400px;
+          padding: 10px 50px 10px 30px;
+          margin :10px 7px 10px 10px;
+        }
+  
+        .top{
+            float:left;
+        }
+
+        .top button {
+            width: 100%;
+            height: 11%;
+            margin-left: 10px;
+            font-size: 20px;
+            
+        }
+
+  
+        .back-btn{
+          width: 120px;
+          height:50px;
+          float: left;
+          border-radius: 10px;
+          border:none;
+          margin-left: 20px;
+          background: whitesmoke;     
+          font-size: 14px;
+          position: absolute;
+          right: 47%;
+          bottom: 50%;
+          border: 1px solid grey;
+        }
+  
+        .back-btn:hover{
+          transform: scale(1.1);
+        }
+  
+        .result{
+          height: 200px;
+          text-align: center;
+          font-size: 60px;
+          position: relative; 
+        }
+  
+        p{
+          height: 0px;
+          text-align: center;
+          font-style: italic;
+          position: absolute;
+          right: 45%;
+          bottom: 3%;
+        }
+  
+      .congrats {
+      position: absolute;
+      top: 140px;
+      width: 800px;
+      height: 150px;
+      padding: 20px 10px;
+      text-align: center;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
+  
+    .congrats1 {
+      position: absolute;
+      top: 300px;
+      width: 800px;
+      height: 150px;
+      padding: 20px 10px;
+      text-align: center;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+     
+    }
+  
+      @keyframes example {
+      0%   {bottom:  0%;}
+      25%  {bottom:  15%;}
+      50%  {bottom:  30%;}
+      75%  {bottom:  15%;}
+      100% {bottom:  0%;}
+  }
+  
+  
+    #Congratulations h1 {
+      transform-origin: 50% 50%;
+      font-size: 50px;
+      cursor: pointer;
+      z-index: 2;
+      position: absolute;
+      bottom:0;
+      text-align: center;
+      width: 100%;
+      color: white;
+      animation: example 2s linear;
+    }
+  
+  
+    @keyframes snow {
+      0% {
+        opacity: 0.8; width: 20%;
+      }
+      100% {
+        opacity: 1;width: 35%;
+      }
+    }
+  
+    .stars {
+      z-index: 1;
+      position: absolute;
+      top: 10px;
+      width: 550px;
+      height: 100px;
+      padding: 20px 10px;
+      text-align: center;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      animation: snow 3s linear infinite;
+    }
+  
+    .stars img {
+      width: 20%;
+      float: left; 
+    }
+
+    #changeButton{
+        height: 50px;
+        width: 200px;
+        position: absolute;
+        left: 44.5%;
+        bottom: 25%;
+        border : 1px solid grey;
+        border-radius: 10px;
+        background: whitesmoke;
+        font-size: 20px;
+    }
+
+    #changedButton{
+        height: 50px;
+        width: 200px;
+        position: absolute;
+        left: 44.5%;
+        bottom: 25%;
+        border : 1px solid grey;
+        border-radius: 10px;
+        background: whitesmoke;
+        font-size: 20px;
+        display: none;
+    }
+
+    #changeButton:hover{
+        transform: scale(1.1);
+        border: 1px solid grey;
+    }
+
+    #changedButton:hover{
+        transform: scale(1.1);
+        border: 1px solid grey;
+    }
+
+    .top button:hover {
+        transform: scale(1.02);
+         opacity : 0.8 ;
+         
+    }
+
+      </style>
+  </head>
+  <body>
+    <div id="quizContainer" class="container" >
+        <div class="title">Math Quiz</div>
+        <div id="question" class="question" ></div>
+        <div class ="option top">
+            <button name="option" value="1" id="opt1" onclick="loadNextQuestion(this.value)"/>
+        </div>
+        <div class ="option top">
+            <button name="option" value="2" id="opt2" onclick="loadNextQuestion(this.value)"/> 
+        </div>
+        <div class ="option top">
+            <button name="option" value="3" id="opt3" onclick="loadNextQuestion(this.value)"/> 
+        </div>
+        <div class ="option top">
+            <button name="option" value="4" id="opt4" onclick="loadNextQuestion(this.value)"/> 
+       </div>
+       
+        <p id="p"></p>
+       </div>
+
+    <div class="changeTheme">
+        <button id="changeButton" onclick="changeTheme()">Change Theme</button>
+        <button id="changedButton" onclick="changedTheme()">Change Theme</button>
+    </div>
+
+    <div id="result" class="container result" style="display: none;">
+    </div>
+    <button id="backButton" class="back-btn" style="display: none;" onclick="startAgain()">Start Again</button>
+    <div id="Congratulations" style="display: none;">
+      <div class="congrats">
+        <h1>Chúc Mừng</h1>
+        
+      </div>
+      <div class="congrats1">
+        <h1>Bạn Đã Trả Lời Đúng : 5/5</h1>
+        
+      </div>
+      <div class="stars">
+        <img src="star.png"/>
+        <img src="star.png"/>
+        <img src="star.png"/>
+        <img src="star.png"/>
+        <img src="star.png"/>
+      </div>
+    </div>  
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+      var questions = [
+        {
+          "question":"10 + 2 = ?",
+          "option1":"10",
+          "option2":"102",
+          "option3":"201",
+          "option4":"12",
+          "answer":"4"
+        },
+  
+        {
+          "question":"200 x 10 = ?",
+          "option1":"2001",
+          "option2":"2210",
+          "option3":"2020",
+          "option4":"2000",
+          "answer":"4"
+        },
+  
+        {
+          "question":"9 : 3 = ?",
+          "option1":"3",
+          "option2":"39",
+          "option3":"93",
+          "option4":"30",
+          "answer":"1"
+        },
+  
+        {
+          "question":"2 + 2 : 2 = ?",
+          "option1":"2",
+          "option2":"3",
+          "option3":"4",
+          "option4":"5",
+          "answer":"2"
+        },
+  
+        {
+          "question":"3 + 3 x 3 = ?",
+          "option1":"12",
+          "option2":"18",
+          "option3":"99",
+          "option4":"333",
+          "answer":"1"
+        },
+  
+      ];
+      
+      var currentQuestion = 0;
+      var score = 0;
+      var totalQuestion = questions.length;
+  
+      function loadQuestion(questionIndex){
+        q = questions[questionIndex];
+        $('#question').html(q.question);
+        $('p').html("Question " + (questionIndex + 1 ) + " of 5 ");
+        $('#opt1').html(q.option1);
+        $('#opt2').html(q.option2);
+        $('#opt3').html(q.option3);
+        $('#opt4').html(q.option4);
+      }
+  
+      function loadNextQuestion(value){
+        var selectedQuestion = value;
+        var answer = selectedQuestion;    
+        if(questions[currentQuestion].answer == answer){
+          score += 1;
+        }
+        currentQuestion++;
+  
+  
+        if(currentQuestion == totalQuestion){
+          if(score < 5){
+            $('#quizContainer').hide();
+            $('#result').show();
+            $('#backButton').show();
+            $('#result').html("Rất tiếc bạn trả lời đúng " + score + "/5");
+            return;
+          }
+          else{
+            $('#quizContainer').hide();
+            $('#Congratulations').show();
+            
+          }
+        }
+        loadQuestion(currentQuestion);
+      }
+  
+      function startAgain(currentQuestion){
+        score = 0 ;
+        window.location.href = window.location.href;
+        loadQuestion(currentQuestion);
+      }
+  
+      loadQuestion(currentQuestion);
+  
+      function changeTheme(){
+          $('body').css('background-color','white');
+          $('#quizContainer').css('background-color',"#3da1d1");
+          $('#question').css('background-color','white');
+          $('button').css('background-color','white');
+          $('.back-btn').css('background-color','#3da1d1');
+          $('#changedButton').css('background-color',"#3da1d1");
+          $('#changeButton').hide();
+          $('#changedButton').show();
+          $("h1").css("color","#3da1d1");
+      }
+
+      function changedTheme(){
+          $('body').css('background-color','#3da1d1');
+          $('#quizContainer').css('background-color',"white");
+          $('#question').css('background-color','white');
+          $('button').css('background-color','whitesmoke');
+          $('#changedButton').hide();
+          $('#changeButton').show();
+          $("h1").css("color","white");
+      }
+
+    </script>
+  
+  </body>
+  </html> 

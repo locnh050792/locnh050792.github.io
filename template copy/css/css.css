@@ -1,0 +1,22 @@
+* {
+    box-sizing: border-box;
+}
+
+.test {
+	width: 300px;
+	height: 300px;
+	margin: auto;
+	background-color: red;
+	transition: 0.4s;
+	transform: translateX(-500%);
+	transform: translateY(300%)
+
+}
+
+.test2 {
+	background-color: blue;
+	transform: translateX(50%);
+	transition: 0.4s;
+	
+
+}

@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body{
+    max-width: 800px;
+    margin: auto;
+}
+
+h1{
+    text-align: center;
+}
+
+.playerName{
+    text-align: center;
+    font-size: 50px;
+}
+
+.title{
+    background: brown;
+    border: 1px solid black;
+}
+.infoPlayer{
+    background: silver;
+    height: 200px;
+    border: 1px solid black;
+}
+
+img{
+    height: 200px;
+    width: 200px;
+    float: left;
+    
+}

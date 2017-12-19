@@ -1,0 +1,390 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Bai Tap Form</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: inherit;
+
+        }
+
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        .wrap {
+            max-width: 1500;
+            margin: auto;
+            background: gainsboro;
+            height: 850px;
+
+        }
+
+        .loginForm {
+            padding-top: 40px;
+            width: 100%;
+            height: 140px;
+            border: 1px solid grey;
+
+        }
+
+        .left {
+            float: left;
+            width: 40%;
+            height: 80px;
+            padding-left: 80px;
+        }
+
+        .right {
+            float: right;
+            width: 40%;
+            height: 80px;
+            position: relative;
+        }
+
+        .title {
+            float: left;
+            width: 33.330%;
+            padding-right: 30px;
+            position: relative;
+            height: 41px;
+        }
+
+        .remember {
+            float: left;
+            width: 33.330%;
+            padding-right: 30px;
+            position: relative;
+            height: 41px;
+            padding-top: 5px;
+        }
+
+        .remember a:link {
+            color: black;
+            text-decoration: none;
+        }
+
+        .title input {
+            width: 100%;
+            height: 24px;
+            padding: 0;
+            border: 1px solid grey;
+            font-size: 16px;
+
+        }
+
+        #loginButton {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 80px;
+            height: 24px;
+            background: whitesmoke;
+        }
+
+        #loginButton:hover {
+            opacity: 0.8;
+        }
+
+        .content {
+            height: 850px;
+            background: whitesmoke;
+        }
+
+        .register {
+            width: 40%;
+            float: right;
+            height: 800px;
+            padding-top: 50px;
+        }
+
+        .row {
+            width: 480px;
+            float: left;
+            padding-bottom: 20px;
+        }
+
+        .register input {
+            height: 30px;
+            width: 100%;
+            border: 1px solid grey;
+            font-size: 20px;
+        }
+
+        .name {
+            float: left;
+            width: 46%;
+            position: relative;
+            height: 40px;
+        }
+
+        .sure {
+            float: right;
+        }
+
+        .info {
+            width: 100%;
+            height: 40px;
+        }
+
+        .date {
+            width: 100%;
+            float: left;
+            font-size: 25px;
+        }
+
+        .date input {
+            width: 5%;
+            padding-top: 15px;
+        }
+
+        .gender {
+            width: 30%;
+
+        }
+
+        .gender input {
+            width: 15%;
+
+        }
+
+
+        select.day {
+            width: 12%;
+            height: 35px;
+            font-size: 18px;
+        }
+
+        select.month {
+            width: 16%;
+            height: 35px;
+            font-size: 18px;
+        }
+
+        select.year {
+            width: 18%;
+            height: 35px;
+            font-size: 18px;
+        }
+
+
+        .submitButton {
+            padding-top: 25px;
+        }
+
+        .submitButton input {
+            width: 240;
+            height: 50px;
+            border: 1px solid grey;
+            background: gainsboro;
+        }
+
+        .submitButton input:hover {
+            opacity: 0.9;
+        }
+
+        .error{
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class='wrap'>
+        <div class="loginForm">
+            <div class="left">
+                <a href="index.html">
+                    <img src="http://www.moy.media/wp-content/uploads/2017/07/Website-Logo-5.png" />
+                </a>
+
+            </div>
+            <div class="right">
+                <form>
+                    <div class="title">
+                        <label for="emailLogin">Email</label>
+                        <input type="text" id="emailLogin" name="emailLogin" />
+                    </div>
+                    <div class="title">
+                        <label for="passwordLogin">Password</label>
+                        <input type="password" id="passwordLogin" name="passwordLogin" />
+                    </div>
+                    <div class="title Login">
+                        <input type="submit" value="Login" id="loginButton"></input>
+                    </div>
+                    <div class="Remember">
+                        <input type="checkbox" id="remember">
+                        <label for="remember">Remember me?</label>
+                        </input>
+                    </div>
+                    <div class="Remember">
+                        <a href="#">Forgot your password?</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="register">
+                <h1>Create a new account</h1>
+                <h3>It's free and always will be.</h3>
+                <form action="result.html" id="formSubmit" >
+                    <div class="row">
+                        <div class="name">
+                            <input type="text" id="Name" name="Name" placeholder="FirstName" />
+                            <span class="error"></span>
+                        </div>
+                        <div class="name sure">
+                            <input type="text" id="SureName" name="Sure Name" placeholder="SureName" />
+                            <span class="error"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="info">
+                            <input type="text" id="Email" name="Email" placeholder="Email" />
+                            <span class="error"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="info">
+                            <input type="password" id="Password" name="Password" placeholder="Password" />
+                            <span class="error"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="info">
+                            <input type="text" id="Address" name="Address" placeholder="Address" />
+                            <span class="error"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="info">
+                            <input type="text" id="PhoneNumber" name="Phone Number" placeholder="PhoneNumber" />
+                            <span class="error"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="info">
+                            <input type="text" id="Facebook" name="Facebook" placeholder="Facebook" />
+                            <span class="error"></span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="title">
+                            <h4>Birthday</h4>
+                        </div>
+                        <div class="date">
+                            <select class="day" name="day">
+                            </select>
+                            <select class="month" name="month">
+                            </select>
+                            <select class="year" name="year">
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="date">
+                            <input type="radio" name="Gender" id="Female" value="Female">
+                            <label for="Female">Female</label>
+                            </input>
+                            <input type="radio" name="Gender" id="Male" value="Male" checked></input>
+                            <label for="Male">Male</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="submitButton">
+                            <input type="submit" value="Create Account" />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script>
+        var month = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sept", "Oct", "Nov", "Dec"]
+
+        for (i = 1; i < 32; i++) {
+            if (i == 20) {
+                $('.day').append('<option value=' + [i] + ' selected="selected" >' + [i] + '</option>');
+            }
+            $('.day').append('<option value=' + [i] + ' >' + [i] + '</option>');
+        }
+
+        for (i = 0; i < month.length; i++) {
+            if (i == 10) {
+                $('.month').append('<option value=' + month[i] + ' selected="selected" >' + month[i] + '</option>');
+            }
+            else {
+                $('.month').append('<option value=' + month[i] + '>' + month[i] + '</option>');
+            }
+        }
+
+        for (i = 2007; i >= 1900; i--) {
+            if (i == 1992) {
+                $('.year').append('<option value=' + [i] + ' selected="selected" >' + [i] + '</option>');
+            }
+            $('.year').append('<option value=' + [i] + ' >' + [i] + '</option>');
+        }
+
+        $('#formSubmit').on('submit',function(){
+            var isValid = true;
+
+            if($('#Name').val().trim() == ''){
+                $('#Name').next('span').text('Name is empty');
+                isValid = false;
+            }else{
+                $('#Name').next('span').text('')
+            }
+
+            if($('#SureName').val().trim()== ''){
+                $('#SureName').next('span').text('SureName is empty');
+                isValid = false;
+            }else{
+                $('#SureName').next('span').text('')
+            }
+
+            if($('#Email').val().match(/^([a-zA-Z0-9_\-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([a-zA-Z0-9\-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/)== null){
+                $('#Email').next('span').text('Email is invalid');
+                isValid = false;
+            }else{
+                $('#Email').next('span').text('')
+            }
+
+            if($('#Password').val().trim()== ''){
+                $('#Password').next('span').text('Password is empty');
+                isValid = false;
+            }else{
+                $('#Password').next('span').text('')
+            }
+
+            if($('#Address').val().trim()== ''){
+                $('#Address').next('span').text('Password is empty');
+                isValid = false;
+            }else{
+                $('#Address').next('span').text('')
+            }
+
+            if($('#PhoneNumber').val().match(/^(1?(-?\d{3})-?)?(\d{3})(-?\d{4})$/)== null){
+                $('#PhoneNumber').next('span').text('Phone Number is invalid');
+                isValid = false;
+            }else{
+                $('#PhoneNumber').next('span').text('')
+            }
+
+            if($('#Facebook').val().trim()== ''){
+                $('#Facebook').next('span').text('Facebook is empty');
+                isValid = false;
+            }else{
+                $('#Facebook').next('span').text('')
+            }
+            return isValid;
+        })
+
+
+    </script>
+</body>
+
+</html>

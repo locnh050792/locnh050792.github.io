@@ -1,0 +1,169 @@
+	<html>
+	<head>
+		<title>Bai Tap Image-Gallary</title>
+		<style>
+
+		*{
+			box-sizing: border-box;
+		}
+
+
+		.wrap {
+			max-width: 1188px;
+			margin: auto;
+
+		}
+
+		#banner {
+
+			max-height: 1188px;
+			margin: auto;
+		}
+
+		#backtop{
+			position: fixed;
+			bottom: 20px;
+			right: 30px;
+		}
+
+		#maincontent {
+			width: 100%;
+		}
+
+		#menu {
+			width: 15%;
+			float: left;
+
+		}
+
+		a{
+			display: block;
+			font-size: 30px;
+		}
+
+		a:link {
+			color: black;
+			text-decoration: none;
+		}
+
+		a:active {
+			color: black;
+		}
+
+		a:hover {
+			color: black;
+		}
+
+		a:visited {
+			color: black;
+		}
+
+		#image {
+			width: 85%;
+			float:right;
+		}
+
+		.row {
+			width: 33.33%;
+			float:left;
+		}
+		.row img {
+			width: 100%;
+			padding: 6px;
+		}
+
+		.row img:hover {
+			border: 1px solid blue;
+		}
+	</style>
+</head>
+<body>
+
+
+	<div class="wrap">
+		<div>
+			<img id="banner" src="../img/gallery.jpg" />
+		</div>
+		<div id="maincontent">
+			<div id="menu" > 
+
+				<a href="#"> Landscape </a>
+				<a href="#"> Forest </a>
+				<a href="#"> Mountain </a>
+				<a href="#"> Sea </a>
+				<a href="#"> And More </a>
+
+			</div>
+
+			<div id="image">
+				<div class="row" >
+
+					<img src="../img/anh1.jpg" title="anh1" alt="Image Gallery"/>
+
+				</div>
+				
+				<div class="row">
+					<img  src="../img/anh2.jpg" title="anh2" alt="Image Gallery"/>
+
+				</div>	
+
+				<div class="row">
+					<img src="../img/anh3.jpeg" title="anh3" alt="Image Gallery"/>
+
+				</div>
+				
+				<div class="row">
+					<img src="../img/anh4.jpg" title="anh4" alt="Image Gallery"/>
+				</div>
+
+				<div class="row">
+					<img src="../img/anh5.jpg" title="anh5" alt="Image Gallery"/>
+
+				</div>
+				
+				<div class="row">
+					<img src="../img/anh6.jpeg" title="anh6" alt="Image Gallery"/>
+
+				</div>
+
+				<div class="row">
+					<img src="../img/anh7.jpg" title="anh7" alt="Image Gallery"/>
+
+				</div>
+				
+				<div class="row">
+					<img src="../img/anh8.jpg" title="anh8" alt="Image Gallery"/>
+				</div>
+
+				<div class="row">
+					<img src="../img/anh9.jpg" title="anh9" alt="Image Gallery"/>
+				</div>
+
+				<div class="row">
+					<img src="../img/anh10.jpg" title="anh10" alt="Image Gallery"/>
+				</div>
+				
+				<div class="row">
+					<img src="../img/anh11.jpg" title="anh11" alt="Image Gallery"/>
+
+				</div>
+				
+				<div class="row">
+					<img src="../img/anh12.jpg" title="anh12" alt="Image Gallery"/>
+				</div>
+				
+				
+			</div>	
+		</div>
+		
+	</div>
+
+	<div id="backtop">
+		<a href="#banner"  ><img src="../img/gototop.png" width="80px" title="BackToTop" alt="Back To Top" /></a>
+
+	</div>
+
+
+
+</body>
+</html>

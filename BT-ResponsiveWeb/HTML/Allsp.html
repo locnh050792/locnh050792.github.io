@@ -1,0 +1,435 @@
+<html>
+
+<head>
+	<title>Bai Tap MENU</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
+	<style>
+		* {
+			box-sizing: border-box;
+			font-family: 'Maven Pro', sans-serif;
+			font-size: 18px;
+		}
+
+		body {
+			background-image: url();
+			margin: 0;
+			padding: 0;
+			background: whitesmoke;
+			font-family: 'Maven Pro', sans-serif;
+			font-size: 18px;
+		}
+
+		.wrap {
+			max-width: 1500px;
+			margin: auto;
+			padding: auto;
+			background: white;
+		}
+
+		#banner {
+
+			margin: 0;
+			padding: 0;
+		}
+
+		#backtop {
+			position: fixed;
+			bottom: 20px;
+			right: 10px;
+		}
+
+		#Call {
+			position: fixed;
+			bottom: 20px;
+			left: 5px;
+
+		}
+
+
+		.NoiDung span {
+			font-style: italic;
+		}
+
+		.imageintro img {
+			float: left;
+		}
+
+		.sanpham {
+			padding: 0;
+			margin: 0;
+			max-height: 1500px;
+		}
+
+		.title {
+			text-align: center;
+			font-weight: bold;
+			font-family: monospace;
+
+		}
+
+		.lienhe {
+			height: 400px;
+		}
+
+		.box {
+			border: 1px solid gainsboro;
+			border-top-width: 5px;
+			padding: 20px;
+		}
+
+		.info {
+			border-color: gainsboro;
+		}
+
+		.contact {
+			border-color: gainsboro;
+		}
+
+		.company {
+			border-color: gainsboro;
+		}
+
+		.info span {
+			color: brown;
+
+		}
+
+		.contact span {
+			color: brown;
+
+		}
+
+		.company span {
+			color: brown;
+
+		}
+
+		.lienhe a:link {
+			color: black;
+			text-decoration: none;
+		}
+
+		.lienhe a:hover {
+			color: black;
+			text-decoration: none;
+		}
+
+		.lienhe a:active {
+			color: black;
+			text-decoration: none;
+		}
+
+		.lienhe a:visited {
+			color: black;
+			text-decoration: none;
+		}
+
+		a:link {
+			color: black;
+
+		}
+
+		a:hover {
+			color: black;
+
+		}
+
+		a:active {
+			color: black;
+
+		}
+
+		a:visited {
+			color: black;
+
+		}
+
+		.NoiDung.text {
+			color: brown;
+		}
+
+		h1 {
+			text-align: center;
+			color: #777;
+			padding-bottom: 20px;
+		}
+
+		h2 {
+			color: brown;
+			text-align: center;
+		}
+
+		h3 {
+			color: brown;
+			text-align: center;
+		}
+
+		.row {
+			padding: 0;
+			margin: 0;
+
+		}
+
+
+		.row img {
+			padding-top: 20px;
+			text-align: center;
+
+		}
+
+		.sanpham img:hover {
+			transform: translate(0, -5px)
+		}
+
+		span {
+			text-align: center;
+		}
+
+		@media (max-width:768px) {
+			#backtop {
+				display: none;
+			}
+		}
+
+		@media (min-width:1440px) {
+			#callButton {
+				display: none;
+			}
+		}
+
+		.col-xs-12 {
+			border-bottom: 1px solid gainsboro;
+		}
+
+		img.img-responsive {
+			padding-top: 30px;
+		}
+
+		span {
+			color: brown;
+		}
+
+		.product-clone {
+			position: fixed;
+			z-index: 9999;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="wrap">
+		<div class="container-fluid">
+			<div>
+				<img id="banner" src="../img/banner2.jpg" class="img-responsive" />
+			</div>
+			<div id="maincontent">
+				<header>
+
+					<nav class="navbar navbar-default">
+						<div class="container-fluid">
+							<!-- Brand and toggle get grouped for better mobile display -->
+							<div class="navbar-header">
+								<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+								 aria-expanded="false">
+									<span class="sr-only">Toggle navigation</span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+									<span class="icon-bar"></span>
+								</button>
+								<a class="navbar-brand" href="index.html">Home</a>
+							</div>
+
+							<!-- Collect the nav links, forms, and other content for toggling -->
+							<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+								<ul class="nav navbar-nav">
+									<li>
+										<a href="KM-TT-HT.html">News</a>
+									</li>
+									<li>
+										<a href="#">Products
+											<span class="sr-only">(current)</span>
+										</a>
+									</li>
+
+									<li>
+										<a href="LienHe.html"> Contact Us</a>
+									</li>
+
+								</ul>
+								<ul class="nav navbar-nav navbar-right">
+									<li>
+										<a href="#">
+											<span class="glyphicon glyphicon-user"></span> Sign Up</a>
+									</li>
+									<li>
+										<a href="#">
+											<span class="glyphicon glyphicon-log-in"></span> Login</a>
+									</li>
+								</ul>
+							</div>
+							<!-- /.navbar-collapse -->
+						</div>
+						<!-- /.container-fluid -->
+					</nav>
+				</header>
+
+				<div class="sanpham">
+					<div class="row">
+						<div class="title">
+							<h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+							<h1>
+								Sản Phẩm
+							</h1>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+						<div>
+							<img src="../img/anh2.png" class="img-responsive" />
+						</div>
+						<div>
+							<h2>Bella Aurora</h2>
+							<h3>NICARAGUA</h3>
+							<h3>$14</h3>
+
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+						<div>
+							<img src="../img/anh3.png" class="img-responsive" />
+						</div>
+						<div>
+							<h2>Mr. David Mburu</h2>
+							<h3>KENYA</h3>
+							<h3>$15</h3>
+						</div>
+					</div>
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+						<div>
+							<img src="../img/anh5.png" class="img-responsive" />
+						</div>
+						<div>
+							<h2>San Ramon</h2>
+							<h3>COSTA RICA</h3>
+							<h3>$15</h3>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+						<div>
+							<img src="../img/anh6.png" class="img-responsive" />
+						</div>
+						<div>
+							<h2>Los Nacientes</h2>
+							<h3>COSTA RICA</h3>
+							<h3>$15</h3>
+						</div>
+					</div>
+
+
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+						<div>
+							<img src="../img/anh7.png" class="img-responsive" />
+						</div>
+						<div>
+							<h2>Robinson Figueroa</h2>
+							<h3>COLOMBIA</h3>
+							<h3>$14</h3>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+						<div>
+							<img src="../img/anh8.png" class="img-responsive" />
+						</div>
+						<div>
+							<h2>El Ishco
+
+							</h2>
+							<h3>EL SALVADOR</h3>
+							<h3>$14</h3>
+						</div>
+					</div>
+
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+						<div>
+							<img src="../img/anh9.png" class="img-responsive" />
+						</div>
+
+						<div>
+							<h2>Meaza</h2>
+							<h3>ETHIOPIA</h3>
+							<h3>$15</h3>
+						</div>
+					</div>
+
+
+					<div class="col-xs-12 col-sm-6 col-md-6 col-lg-3">
+						<div>
+							<img src="../img/anh10.png" class="img-responsive" />
+						</div>
+
+						<div>
+							<h2>La Esperanza</h2>
+							<h3>EL SALVADOR
+							</h3>
+							<h3>$15</h3>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+
+					<img src="../img/banner4.jpg" class="img-responsive" />
+				</div>
+
+
+
+				<p style="text-align:center;">&#174; copyright 2017 ABC coffee Ltd. </p>
+			</div>
+		</div>
+		<div id="backtop">
+			<a href="#banner">
+				<img src="../img/back-to-top.png" title="BackToTop" alt="Back To Top" class="img-responsive" />
+			</a>
+		</div>
+		<div id="Call">
+			<a href="">
+				<img src="../img/call.png" title="Call Now" alt="Call Now" class="img-responsive" id="callButton" />
+			</a>
+		</div>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+		<script>
+			$(document).ready(function () {
+
+				if (0 < $('.product button').length) {
+					$('.product button').click(function () {
+						var offset = $(this).parent().offset();
+						$(this).parent().clone().addClass('product-clone').css({
+							'left': offset.left + 'px',
+							'top': parseInt(offset.top - $(window).scrollTop()) + 'px',
+							'width': $(this).parent().width() + 'px',
+							'height': $(this).parent().height() + 'px'
+						}).appendTo($('.product').parent());
+
+						var cart = $('nav .navbar-right strong').offset();
+						$('.product-clone').animate({ top: parseInt(cart.top - $(window).scrollTop()) + 'px', left: cart.left + 'px', 'height': '0px', 'width': '0px' }, 800, function () {
+							$(this).remove();
+							var price = parseInt($('nav .navbar-right').attr('data-price'));
+							var productPrice = parseInt($(this).attr('data-price'));
+							var cartPrice = parseInt(price + productPrice);
+							$('nav .navbar-right strong').html('$' + cartPrice);
+							$('nav .navbar-right').attr('data-price', cartPrice);
+						});
+					});
+				}
+
+			});
+
+		</script>
+</body>
+
+</html>
