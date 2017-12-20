@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Maven+Pro">
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/login.css">
@@ -16,7 +17,7 @@
 
 <body>
     <div class="wrap">
-        <div class="container-fluid">
+        <!-- <div class="container-fluid"> -->
             <div>
                 <img id="banner" src="../img/banner2.jpg" class="img-responsive" />
             </div>
@@ -34,7 +35,11 @@
                                     <span class="icon-bar"></span>
                                     <span class="icon-bar"></span>
                                 </button>
-                                <a class="navbar-brand" href="index.html" ><img src="../img/iconCoffee.png" /></a>
+                                <a class="navbar-brand" href="index.html">
+                                    <!-- <img src="../img/iconCoffee.png" /> -->
+                                    <i class="fa fa-coffee fa-lg" aria-hidden="true" style="color:brown;"></i>
+                                   
+                                </a>
                                 <a class="navbar-brand" href="index.html" style=" font-size:20px; font-weight:bold;">CoffeeHouse</a>
                             </div>
 
@@ -152,7 +157,7 @@
                                     <textarea></textarea>
                                 </div>
                                 <div class="sendButton">
-                                    <button id="button" type="button" class="btn btn-primary">Send</button>
+                                    <button id="button" type="button" class="btn">Send</button>
                                 </div>
 
                             </div>
@@ -161,7 +166,7 @@
 
 
 
-                    <div class="clear" style="margin-top: 10px;">
+                    <div class="row" style="margin-top: 10px;">
                         <p style="text-align:center;">&#174; copyright 2017 ABC coffee Ltd. </p>
                     </div>
                 </div>
@@ -258,7 +263,7 @@
                 </a>
             </div>
         </div>
-    </div>
+    <!-- </div> -->
     <script>
         $(function () {
             $('.navbar-right').click(function () {
@@ -269,7 +274,7 @@
             $('.close').click(function () {
                 $('.Login').hide();
                 $('.modal-backdrop').hide();
-                
+
             })
 
             $('#login-form-link').click(function (e) {

@@ -318,6 +318,11 @@ span {
 .sendButton {
 	padding-bottom: 7px;
 	padding-top: 156px;
+	color: white;
+}
+
+#button{
+	background: brown;
 }
 
 .left-box {

@@ -26,9 +26,14 @@
       margin: auto;
     }
 
+    #map {
+      width: 100%;
+      height: 100%;
+    }
+
     @media(max-width:700px) {
       .maps {
-        height: 50%;
+        height: 300px;
       }
     }
   </style>
@@ -36,329 +41,452 @@
 
 <body>
   <div class="wrap">
-    <div class="container-fluid">
-      <div>
-        <img id="banner" src="../img/banner2.jpg" class="img-responsive" />
-      </div>
-      <div id="maincontent">
-        <header>
+    <!-- <div class="container-fluid"> -->
+    <div>
+      <img id="banner" src="../img/banner2.jpg" class="img-responsive" />
+    </div>
+    <div id="maincontent">
+      <header>
 
-          <nav class="navbar navbar-default navbar-fixed-top">
-            <div class="container-flud">
-              <!-- Brand and toggle get grouped for better mobile display -->
-              <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
-                  aria-expanded="false">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="index.html">
-                  <img src="../img/iconCoffee.png" />
-                </a>
-                <!-- <a class="navbar-brand" href="index.html"><p><span class="glyphicon glyphicon-home "></span></p></a> -->
-                <a class="navbar-brand" href="#" style="color:brown; font-size:20px; font-weight:bold;">CoffeeHouse</a>
+        <nav class="navbar navbar-default navbar-fixed-top">
+          <div class="container-flud">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">
+                <!-- <img src="../img/iconCoffee.png" /> -->
+                <i class="fa fa-coffee fa-lg" aria-hidden="true" style="color:brown;"></i>
+              </a>
+              <!-- <a class="navbar-brand" href="index.html"><p><span class="glyphicon glyphicon-home "></span></p></a> -->
+              <a class="navbar-brand" href="index.html" style="color:brown; font-size:20px; font-weight:bold;">CoffeeHouse</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div>
+              <div class="market">
+                <ul class="nav navbar-nav navbar-right" data-price="0">
+                  <li>
+                    <a href="#" class="shopping-cart">
+                      <span class="glyphicon glyphicon-shopping-cart my-cart-icon">
+                        <span class="badge badge-notify my-cart-badge"></span>
+                      </span>
+                    </a>
+                  </li>
+                </ul>
               </div>
 
-              <!-- Collect the nav links, forms, and other content for toggling -->
-              <div>
-                <div class="market">
-                  <ul class="nav navbar-nav navbar-right" data-price="0">
-                    <li>
-                      <a href="#" class="shopping-cart">
-                        <span class="glyphicon glyphicon-shopping-cart my-cart-icon">
-                          <span class="badge badge-notify my-cart-badge"></span>
-                        </span>
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                  <li>
+                    <a href="KM-TT-HT.html">Tin Tức</a>
+                  </li>
+                  <li>
+                    <a href="SanPham.html">Sản Phẩm
+                      <span class="sr-only">(current)</span>
+                    </a>
+                  </li>
 
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                  <ul class="nav navbar-nav">
-                    <li>
-                      <a href="KM-TT-HT.html">Tin Tức</a>
-                    </li>
-                    <li>
-                      <a href="Allsp.html">Sản Phẩm
-                        <span class="sr-only">(current)</span>
-                      </a>
-                    </li>
+                  <li>
+                    <a href="LienHe.html"> Liên Hệ</a>
+                  </li>
 
-                    <li>
-                      <a href="LienHe.html"> Liên Hệ</a>
-                    </li>
-
-                  </ul>
-                </div>
+                </ul>
               </div>
+            </div>
 
-              <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container-fluid -->
-          </nav>
-        </header>
-        <div class="NoiDung">
-          <div class="row">
-            <div class="title">
-              <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
-              <h1>Về Chúng Tôi </h1>
-            </div>
+            <!-- /.navbar-collapse -->
           </div>
+          <!-- /.container-fluid -->
+        </nav>
+      </header>
+      <div class="NoiDung">
+        <div class="row">
+          <div class="title">
+            <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+            <h1>Về Chúng Tôi </h1>
+          </div>
+        </div>
 
-          <div id="aboutUs">
-            <div class="row ">
-              <div class="col-lg-4">
-                <div class="NoiDung text" style="color:brow;">
-                  <span>
-                    <p>Từ những người đam mê cà phê:</p>
-                    <p>Với niềm đam mê về thưởng thức cà phê, chúng tôi đã đi và trải nghiệm rất nhiều nền văn hóa về cà phê
-                      trên thế giới và chúng tôi nghĩ rằng tại sao không tạo nên một nền văn hóa thưởng thức cà phê.</p>
-                    <p> Đó là nơi giao thoa giữa văn hóa cà phê của các vùng trên thế giới. Chúng tôi đã du nhập những công nghệ
-                      tiên tiến nhất trên thế giới để mang lại cho người tiêu dùng Việt Nam những tinh hoa tuyệt vời nhất
-                      về cà phê.</p>
-                    <p>Giá trị của chúng tôi là mang đến cho khách hàng những ly cà phê sạch hảo hạng và thơm ngon nhất, chúng
-                      tôi mong muốn đưa trải nghiệm về cà phê của khách hàng lên một tầm cao mới. </p>
-                  </span>
-                </div>
+        <div id="aboutUs">
+          <div class="row ">
+            <div class="col-lg-4">
+              <div class="NoiDung text" style="color:brow;">
+                <span>
+                  <p>Từ những người đam mê cà phê:</p>
+                  <p>Với niềm đam mê về thưởng thức cà phê, chúng tôi đã đi và trải nghiệm rất nhiều nền văn hóa về cà phê trên
+                    thế giới và chúng tôi nghĩ rằng tại sao không tạo nên một nền văn hóa thưởng thức cà phê.</p>
+                  <p> Đó là nơi giao thoa giữa văn hóa cà phê của các vùng trên thế giới. Chúng tôi đã du nhập những công nghệ
+                    tiên tiến nhất trên thế giới để mang lại cho người tiêu dùng Việt Nam những tinh hoa tuyệt vời nhất về
+                    cà phê.</p>
+                  <p>Giá trị của chúng tôi là mang đến cho khách hàng những ly cà phê sạch hảo hạng và thơm ngon nhất, chúng
+                    tôi mong muốn đưa trải nghiệm về cà phê của khách hàng lên một tầm cao mới. </p>
+                </span>
               </div>
-              <div class="col-lg-8">
-                <div class="NoiDung anh ">
-                  <div class="NoiDung anh1">
-                    <div class="slide">
-                      <img src="../img/cafe1.jpg" class="img-responsive" style="display: none" />
-                      <img src="../img/cafe2.jpg" class="img-responsive" style="display: none" />
-                      <img src="../img/cafe3.jpg" class="img-responsive" style="display: none" />
-                      <div class="arrow">
-                        <i class="fa fa-chevron-left fa-3x" aria-hidden="true"></i>
-                        <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
-                      </div>
-                      <div class="circle">
-                        <i class="fa fa-circle circle-i active" aria-hidden="true"></i>
-                        <i class="fa fa-circle circle-i" aria-hidden="true"></i>
-                        <i class="fa fa-circle circle-i" aria-hidden="true"></i>
-                      </div>
+            </div>
+            <div class="col-lg-8">
+              <div class="NoiDung anh ">
+                <div class="NoiDung anh1">
+                  <div class="slide">
+                    <img src="../img/cafe1.jpg" class="img-responsive" style="display: none" />
+                    <img src="../img/cafe2.jpg" class="img-responsive" style="display: none" />
+                    <img src="../img/cafe3.jpg" class="img-responsive" style="display: none" />
+                    <div class="arrow">
+                      <i class="fa fa-chevron-left fa-3x" aria-hidden="true"></i>
+                      <i class="fa fa-chevron-right fa-3x" aria-hidden="true"></i>
+                    </div>
+                    <div class="circle">
+                      <i class="fa fa-circle circle-i active" aria-hidden="true"></i>
+                      <i class="fa fa-circle circle-i" aria-hidden="true"></i>
+                      <i class="fa fa-circle circle-i" aria-hidden="true"></i>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
-        </div>
-        <div class="sanpham">
-          <div class="row">
-            <div class="title">
-              <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
-              <h1>
-                Sản Phẩm
-              </h1>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
-            <div data-price="14">
-              <a href="Allsp.html">
-                <div>
-                  <img src="../img/anh2.png" class="img-responsive" />
-                </div>
-              </a>
-              <h2>Bella Aurora</h2>
-              <h3>VIETNAM</h3>
-              <h4>100 000đ</h4>
-              <button class="btn btn-default btn-block my-cart-btn" data-id="1" data-name="Bella Aurora" data-summary="summary 1" data-price="14"
-                data-quantity="1" data-image="../img/anh2.png">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
-            <div data-price="15">
-              <a href="Allsp.html">
-                <div>
-                  <img src="../img/anh3.png" class="img-responsive" />
-                </div>
-              </a>
-              <h2>Mr. David Mburu</h2>
-              <h3>VIETNAM</h3>
-              <h4>120 000đ</h4>
-              <button class="btn btn-default btn-block my-cart-btn" data-id="2" data-name="Mr. David Mburu" data-summary="summary 2" data-price="15"
-                data-quantity="1" data-image="../img/anh3.png">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
-            <div data-price="15">
-              <a href="Allsp.html">
-                <div>
-                  <img src="../img/anh5.png" class="img-responsive" />
-                </div>
-              </a>
-
-              <h2>San Ramon</h2>
-              <h3>VIETNAM</h3>
-              <h4>120 000đ</h4>
-              <button class="btn btn-default btn-block my-cart-btn" data-id="3" data-name="San Ramon" data-summary="summary 3" data-price="15"
-                data-quantity="1" data-image="../img/anh5.png">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
-            <div data-price="15">
-              <a href="Allsp.html">
-                <div>
-                  <img src="../img/anh6.png" class="img-responsive" />
-                </div>
-              </a>
-
-              <h2>Los Nacientes</h2>
-              <h3>VIETNAM</h3>
-              <h4>120 000đ</h4>
-              <button class="btn btn-default btn-block my-cart-btn" data-id="4" data-name="Los Nacientes" data-summary="summary 4" data-price="15"
-                data-quantity="1" data-image="../img/anh6.png">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
-            </div>
-          </div>
-
-
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
-            <div data-price="15">
-              <a href="Allsp.html">
-                <div>
-                  <img src="../img/anh7.png" class="img-responsive" />
-                </div>
-              </a>
-
-              <h2>R.Figueroa</h2>
-              <h3>VIETNAM</h3>
-              <h4>120 000đ</h4>
-              <button class="btn btn-default btn-block my-cart-btn" data-id="5" data-name="R.Figueroa" data-summary="summary 5" data-price="15"
-                data-quantity="1" data-image="../img/anh7.png">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
-            <div data-price="14">
-              <a href="Allsp.html">
-                <div>
-                  <img src="../img/anh8.png" class="img-responsive" />
-                </div>
-              </a>
-
-              <h2>El Ishco
-              </h2>
-              <h3>VIETNAM</h3>
-              <h4>120 000đ</h4>
-              <button class="btn btn-default btn-block my-cart-btn" data-id="6" data-name="El Ishco" data-summary="summary 6" data-price="14"
-                data-quantity="1" data-image="../img/anh8.png">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
-            </div>
-          </div>
-
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
-            <div data-price="15">
-              <a href="Allsp.html">
-                <div>
-                  <img src="../img/anh9.png" class="img-responsive" />
-                </div>
-              </a>
-
-              <h2>Meaza</h2>
-              <h3>VIETNAM</h3>
-              <h4>150 000đ</h4>
-              <button class="btn btn-default btn-block my-cart-btn" data-id="7" data-name="Meaza" data-summary="summary 7" data-price="15"
-                data-quantity="1" data-image="../img/anh9.png">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
-            </div>
-          </div>
-
-
-          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
-            <div data-price="15">
-              <a href="Allsp.html">
-                <div>
-                  <img src="../img/anh10.png" class="img-responsive" />
-                </div>
-              </a>
-
-              <h2>La Esperanza</h2>
-              <h3>VIETNAM
-              </h3>
-              <h4>150 000đ</h4>
-              <button class="btn btn-default btn-block my-cart-btn" data-id="8" data-name="La Esperanza" data-summary="summary 8" data-price="15"
-                data-quantity="1" data-image="../img/anh10.png">
-                <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
-            </div>
-          </div>
-
-        </div>
-        <div class="row">
-
-          <img src="../img/banner4.jpg" class="img-responsive" />
-        </div>
-        <div class="lienhe">
-          <div class="title">
-            <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
-            <a href="LienHe.html#button">
-              <h1>Liên Hệ</h1>
-            </a>
-          </div>
-          <div class="row" style="height:500px;">
-            <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 left-box">
-              <div class="box">
-                <h2>Thông tin cơ bản</h2>
-                <div>
-                  <span>Công ty ABC coffee Việt Nam</span>
-                </div>
-                <div>
-                  <span>Chi nhánh Hà Nội </span>
-                </div>
-                <div>
-                  <span>Thành Lập 2017</span>
-                </div>
-              </div>
-              <div class="box">
-                <h2>Thông tin liên hệ</h2>
-                <div>
-                  <span>Địa Chỉ : Hà Nội - Việt Nam</span>
-                </div>
-                <div>
-                  <span>Gmail : info@gmail.com</span>
-                </div>
-                <div>
-                  <span>Điện Thoại : 19001900</span>
-                </div>
-              </div>
-              <div class="box">
-                <h2>Thời gian làm việc</h2>
-                <div>
-                  <span>Thứ 2 tới thứ 6: 6h:00 - 22:30</span>
-                </div>
-                <div>
-                  <span>Thứ 7: 7h:00 - 22h:30</span>
-                </div>
-                <div>
-                  <span>Chủ nhật: 7h:00 - 12:00</span>
-                </div>
-              </div>
-            </div>
-            <div class="maps col-xs-12 col-sm-6 col-md-6 col-lg-6">
-              <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=ha%20noi&destination=hanoi&key=AIzaSyBw-7OIeusMztYHWln-8uNbeD97dbu0wac"
-                allowfullscreen></iframe>
-            </div>
-
-          </div>
-        </div>
-        <div class="clear">
-          <p style="text-align:center;">&#174; copyright 2017 ABC coffee Ltd. </p>
         </div>
 
       </div>
+      <div class="sanpham">
+        <div class="row">
+          <div class="title">
+            <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+            <h1>
+              Sản Phẩm
+            </h1>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+          <div data-price="14">
+            <a href="Allsp.html">
+              <div>
+                <img src="../img/anh2.png" class="img-responsive" />
+              </div>
+            </a>
+            <h3>Bella Aurora</h3>
+            <div class="row lead evaluation">
+              <div id="colorstar" class="starrr ratable"></div>
+            </div>
+
+            <h2>100 000đ</h2>
+            <button class="btn btn-default btn-block my-cart-btn" data-id="1" data-name="Bella Aurora" data-summary="summary 1" data-price="14"
+              data-quantity="1" data-image="../img/anh2.png">
+              <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+          <div data-price="15">
+            <a href="Allsp.html">
+              <div>
+                <img src="../img/anh3.png" class="img-responsive" />
+              </div>
+            </a>
+            <h3>Mr. David Mburu</h3>
+            <div class="row lead evaluation">
+              <div id="colorstar" class="starrr ratable"></div>
+            </div>
+            <h2>120 000đ</h2>
+            <button class="btn btn-default btn-block my-cart-btn" data-id="2" data-name="Mr. David Mburu" data-summary="summary 2" data-price="15"
+              data-quantity="1" data-image="../img/anh3.png">
+              <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+          <div data-price="15">
+            <a href="Allsp.html">
+              <div>
+                <img src="../img/anh5.png" class="img-responsive" />
+              </div>
+            </a>
+
+            <h3>San Ramon</h3>
+            <div class="row lead evaluation">
+              <div id="colorstar" class="starrr ratable"></div>
+            </div>
+            <h2>120 000đ</h2>
+            <button class="btn btn-default btn-block my-cart-btn" data-id="3" data-name="San Ramon" data-summary="summary 3" data-price="15"
+              data-quantity="1" data-image="../img/anh5.png">
+              <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+          <div data-price="15">
+            <a href="Allsp.html">
+              <div>
+                <img src="../img/anh6.png" class="img-responsive" />
+              </div>
+            </a>
+
+            <h3>Los Nacientes</h3>
+            <div class="row lead evaluation">
+              <div id="colorstar" class="starrr ratable"></div>
+            </div>
+            <h2>120 000đ</h2>
+            <button class="btn btn-default btn-block my-cart-btn" data-id="4" data-name="Los Nacientes" data-summary="summary 4" data-price="15"
+              data-quantity="1" data-image="../img/anh6.png">
+              <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+          </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+          <div data-price="15">
+            <a href="Allsp.html">
+              <div>
+                <img src="../img/anh7.png" class="img-responsive" />
+              </div>
+            </a>
+
+            <h3>R.Figueroa</h3>
+            <div class="row lead evaluation">
+              <div id="colorstar" class="starrr ratable"></div>
+            </div>
+            <h2>120 000đ</h2>
+            <button class="btn btn-default btn-block my-cart-btn" data-id="5" data-name="R.Figueroa" data-summary="summary 5" data-price="15"
+              data-quantity="1" data-image="../img/anh7.png">
+              <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+          <div data-price="14">
+            <a href="Allsp.html">
+              <div>
+                <img src="../img/anh8.png" class="img-responsive" />
+              </div>
+            </a>
+
+            <h3>El Ishco
+            </h3>
+            <div class="row lead evaluation">
+              <div id="colorstar" class="starrr ratable"></div>
+            </div>
+            <h2>120 000đ</h2>
+            <button class="btn btn-default btn-block my-cart-btn" data-id="6" data-name="El Ishco" data-summary="summary 6" data-price="14"
+              data-quantity="1" data-image="../img/anh8.png">
+              <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+          </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+          <div data-price="15">
+            <a href="Allsp.html">
+              <div>
+                <img src="../img/anh9.png" class="img-responsive" />
+              </div>
+            </a>
+
+            <h3>Meaza</h3>
+            <div class="row lead evaluation">
+              <div id="colorstar" class="starrr ratable"></div>
+            </div>
+            <h2>150 000đ</h2>
+            <button class="btn btn-default btn-block my-cart-btn" data-id="7" data-name="Meaza" data-summary="summary 7" data-price="15"
+              data-quantity="1" data-image="../img/anh9.png">
+              <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+          </div>
+        </div>
+
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-3 product">
+          <div data-price="15">
+            <a href="Allsp.html">
+              <div>
+                <img src="../img/anh10.png" class="img-responsive" />
+              </div>
+            </a>
+
+            <h3>La Esperanza</h3>
+            <div class="row lead evaluation">
+              <div id="colorstar" class="starrr ratable"></div>
+            </div>
+            <h2>150 000đ</h2>
+            <button class="btn btn-default btn-block my-cart-btn" data-id="8" data-name="La Esperanza" data-summary="summary 8" data-price="15"
+              data-quantity="1" data-image="../img/anh10.png">
+              <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart</button>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <img src="../img/banner5.png" class="img-responsive" />
+      </div>
+
+      <div class="pha-che">
+        <div class="title">
+          <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+          <h1>Pha Chế</h1>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 use">
+          <h3>Bước 1
+          </h3>
+          <div>
+            <img src="../img/phacheB1.jpg" class="img-responsive" />
+          </div>
+          <h5>Đun sôi khoảng 600 ml nước, khoảng gấp đôi lượng nước cần thiết cho việc pha cafe thực tế.</h5>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 use">
+          <h3>Bước 2
+          </h3>
+          <div>
+            <img src="../img/phacheB2.jpg" class="img-responsive" />
+          </div>
+          <h5>
+            Cân khoảng 25-30 gr cà phê, khoảng 2-3 muỗng cafe nguyên hạt trước khi bạn nghiền hạt cà phê.</h5>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 use">
+          <h3>Bước 3
+          </h3>
+          <div>
+            <img src="../img/phacheB3.jpg" class="img-responsive" />
+          </div>
+          <h5>
+            Trong khi nước đang được đun sôi , nghiền cà phê của bạn trong máy xay. Các hạt đậu nên được xay nhuyễn như hạt ớt.
+          </h5>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 use">
+          <h3>Bước 4
+          </h3>
+          <div>
+            <img src="../img/phacheB4.jpg" class="img-responsive" />
+          </div>
+          <h5>Lấy giấy lọc và gấp lại và đặt nó trong một bộ lọc. Điều này ngăn ngừa cà phê không bị cặn trong quá trình pha
+            chế.
+          </h5>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 use">
+          <h3>Bước 5
+          </h3>
+          <div>
+            <img src="../img/phacheB5.jpg" class="img-responsive" />
+          </div>
+          <h5>
+            Đảm bảo bộ lọc cà phê có cùng kích thước với giấy lọc của bạn. Điều này sẽ ngăn chặn vụn cà phê một cách tốt nhất.</h5>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 use">
+          <h3>Bước 6
+          </h3>
+          <div>
+            <img src="../img/phacheB6.jpg" class="img-responsive" />
+          </div>
+          <h5>Trước khi đặt hạt cà phê đã được đổ vào bộ lọc, đổ một ít nước nóng, làm đầy giấy lọc cũng như làm ấm bộ lọc khoảng
+            30 giây.</h5>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 use">
+          <h3>Bước 7
+          </h3>
+          <div>
+            <img src="../img/phacheB7.jpg" class="img-responsive" />
+          </div>
+          <h5>
+            Đổ cà phê xay vào giấy lọc và làm mịn cà phê bằng cách lắc nhẹ bộ lọc . </h5>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 use">
+          <h3>Bước 8
+          </h3>
+          <div>
+            <img src="../img/phacheB8.jpg" class="img-responsive" />
+          </div>
+          <h5>Bắt đầu đổ hai lần lượng nước gấp đôi lượng cafe của bạn .
+            <br/>Ví dụ: 50 gram nước nếu bạn có 25 gram cà phê. Đổ mỗi lần cách nhau
+            khoảng từ 30 đến 45 giây.</h5>
+        </div>
+
+        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-4 use">
+          <h3>Bước 9
+          </h3>
+          <div>
+            <img src="../img/phacheB9.jpg" class="img-responsive" />
+          </div>
+          <h5>Tiếp tục đổ nước nóng nhẹ nhàng vào cà phê. Mất khoảng hai rưỡi đến ba phút để hoàn thành và cần khoảng 350 gram
+            nước. Đã đến lúc thưởng thức ly cafe tuyệt vời của bạn .
+          </h5>
+        </div>
+      </div>
+
+      <div class="row">
+        <img src="../img/banner4.jpg" class="img-responsive" />
+      </div>
+
+      <div class="lienhe">
+        <div class="title">
+          <h1>&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;&#8212;</h1>
+          <a href="LienHe.html#button">
+            <h1>Liên Hệ</h1>
+          </a>
+        </div>
+        <div class="row" style="height:500px;">
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 left-box">
+            <div class="box">
+              <h2>Thông tin cơ bản</h2>
+              <div>
+                <span>Công ty ABC coffee Việt Nam</span>
+              </div>
+              <div>
+                <span>Chi nhánh Hà Nội </span>
+              </div>
+              <div>
+                <span>Thành Lập 2017</span>
+              </div>
+            </div>
+            <div class="box">
+              <h2>Thông tin liên hệ</h2>
+              <div>
+                <span>Địa Chỉ : Hà Nội - Việt Nam</span>
+              </div>
+              <div>
+                <span>Gmail : info@gmail.com</span>
+              </div>
+              <div>
+                <span>Điện Thoại : 19001900</span>
+              </div>
+            </div>
+            <div class="box">
+              <h2>Thời gian làm việc</h2>
+              <div>
+                <span>Thứ 2 tới thứ 6: 6h:00 - 22:30</span>
+              </div>
+              <div>
+                <span>Thứ 7: 7h:00 - 22h:30</span>
+              </div>
+              <div>
+                <span>Chủ nhật: 7h:00 - 12:00</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 maps">
+            <div id="map"></div>
+            <!-- <iframe width="100%" height="100%" frameborder="0" style="border:0" src="https://www.google.com/maps/embed/v1/directions?origin=ha%20noi&destination=hanoi&key=AIzaSyBw-7OIeusMztYHWln-8uNbeD97dbu0wac"
+                allowfullscreen></iframe> -->
+          </div>
+        </div>
+      </div>
+
+      <div class="clear">
+        <p style="text-align:center;">&#174; copyright 2017 ABC coffee Ltd. </p>
+      </div>
+
     </div>
+    <!-- </div> -->
     <div id="backtop">
       <a href="#banner">
         <img src="../img/back-to-top.png" title="BackToTop" alt="Back To Top" class="img-responsive" />
@@ -369,11 +497,14 @@
         <img src="../img/call.png" title="Call Now" alt="Call Now" class="img-responsive" id="callButton" title="Call Now" />
       </a>
     </div>
+    
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script type='text/javascript' src="js/script.js"></script>
     <script type='text/javascript' src="js/bootstrap.min.js"></script>
     <script type='text/javascript' src="js/jquery.mycart.js"></script>
     <script type="text/javascript">
+
       $(function () {
         if (0 < $('.product button').length) {
           $('.product button').click(function () {

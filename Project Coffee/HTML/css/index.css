@@ -180,12 +180,27 @@ h4 {
     margin: 0;
 }
 
+.row2{
+    margin-bottom: 50px;
+}
+
 
 .row img {
     padding-top: 20px;
     text-align: center;
 
 }
+
+h5 {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.use {
+    margin-bottom: 50px;
+}
+
 
 .sanpham img:hover {
     transform: translate(0, -5px)
@@ -266,6 +281,9 @@ span {
     position: relative;
     bottom: 10px;
 }
+.product{
+    margin-bottom: 80px;
+}
 
 .product-clone {
     position: fixed;
@@ -281,6 +299,22 @@ span {
 .slide img {
     position: absolute;
     top: 0;
+}
+
+#colorstar {
+    color: yellow;
+}
+
+.badForm {
+    color: #FF0000;
+}
+
+.goodForm {
+    color: #00FF00;
+}
+
+.evaluation {
+    text-align: center;
 }
 
 
@@ -301,7 +335,7 @@ span {
 .circle{
     position: absolute;
     top: 400px;
-    right: 50%;
+    right: 45%;
    color: whitesmoke;
 
 }
@@ -309,6 +343,7 @@ span {
 .active{
     color:brown;
 }
+
 
 @media (max-width:500px) {
     .slide {
