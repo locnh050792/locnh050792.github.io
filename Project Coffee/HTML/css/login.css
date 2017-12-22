@@ -162,6 +162,7 @@ body {
 
 }
 
+
 .lienhe {
 	height: 400px;
 }
@@ -169,6 +170,7 @@ body {
 .info {
 	border-color: gainsboro;
 	border-bottom: 2px solid gainsboro;
+	
 }
 
 .contact {
@@ -276,6 +278,7 @@ img.img-responsive {
 .info {
 	border-color: gainsboro;
 	border-bottom: 2px solid gainsboro;
+	padding-bottom: 21px;
 }
 
 .contact {
@@ -292,6 +295,7 @@ img.img-responsive {
 .spantext {
 	padding: 5px;
 	width: 100%;
+	padding-bottom: 21px;
 }
 
 .spantext input {
@@ -312,7 +316,7 @@ span {
 }
 
 #maincontent {
-	height: 700px;
+	height: 800px;
 }
 
 .sendButton {
@@ -330,12 +334,12 @@ span {
 	margin-bottom: 20px;
 }
 
-
-@media (max-width:768px) {
-	#backtop {
-		display: none;
-	}
+.clear{
+    clear: both;
 }
+
+
+
 
 @media (min-width:1440px) {
 	#callButton {
