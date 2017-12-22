@@ -13,7 +13,7 @@
 
     var _options = null;
     var DEFAULT_OPTIONS = {
-      currencySymbol: '$',
+      currencySymbol: ' Đ',
       classCartIcon: 'my-cart-icon',
       classCartBadge: 'my-cart-badge',
       classProductQuantity: 'my-product-quantity',
@@ -28,6 +28,7 @@
       clickOnCartIcon: function ($cartIcon, products, totalPrice, totalQuantity) { },
       checkoutCart: function (products, totalPrice, totalQuantity) { },
       getDiscountPrice: function (products, totalPrice, totalQuantity) { return null; }
+      
     };
 
 
@@ -59,6 +60,7 @@
     objToReturn.getRoundedNumber = getRoundedNumber;
     return objToReturn;
   }());
+  
 
   var ProductManager = (function () {
     var objToReturn = {};
@@ -235,16 +237,16 @@
       $cartTable.empty();
 
       var products = ProductManager.getAllProducts();
+      $cartTable.append('<tr>' + '<th>' + 'Ảnh' + '</th>' + '<th>' + 'Tên Sản phẩm' + '</th>' + '<th>' + 'Giá Tiền' + '</th>' + '<th>' + 'Số Lượng' + '</th>' + '<th>' + 'Cộng' + '</th>' + '</tr>')
       $.each(products, function () {
         var total = this.quantity * this.price;
         $cartTable.append(
-          '<tr>' + '<th>' + 'Ảnh' + '</th>' + '<th>' + 'Tên Sản phẩm' + '</th>' + '<th>' + 'Giá Tiền' + '</th>' + '<th>' + 'Số Lượng' + '</th>' + '<th>' + 'Cộng' + '</th>' + '</tr>' +
           '<tr title="' + this.summary + '" data-id="' + this.id + '" data-price="' + this.price + '">' +
           '<td class="text-center" style="width: 30px;"><img width="30px" height="30px" src="' + this.image + '"/></td>' +
           '<td>' + this.name + '</td>' +
-          '<td title="Unit Price">' + options.currencySymbol + MathHelper.getRoundedNumber(this.price) + '</td>' +
+          '<td title="Unit Price">' +  this.price + " Đ" +'</td>' +
           '<td title="Quantity" class="number-input"><input type="number" min="1"  class="' + classProductQuantity + '" value="' + this.quantity + '"/></td>' +
-          '<td title="Tổng Cộng" class="' + classProductTotal + '">' + options.currencySymbol + MathHelper.getRoundedNumber(total) + '</td>' +
+          '<td title="Tổng Cộng" class="' + classProductTotal + '">' + total + " Đ" +'</td>' +
           '<td title="Remove from Cart" class="text-center" style="width: 30px;"><a href="javascript:void(0);" class="btn btn-xs btn-danger ' + classProductRemove + '">X</a></td>' +
           '</tr>'
         );
@@ -253,13 +255,13 @@
       $cartTable.append(products.length ?
         '<tr>' +
         '<td></td>' +
-        '<td><strong>Total</strong></td>' +
+        '<td><strong>Tổng Cộng</strong></td>' +
         '<td></td>' +
         '<td></td>' +
         '<td><strong id="' + idGrandTotal + '"></strong></td>' +
         '<td></td>' +
         '</tr>'
-        : '<div class="alert alert-danger" role="alert" id="' + idEmptyCartMessage + '">Your cart is empty</div>'
+        : '<div class="alert alert-danger" role="alert" id="' + idEmptyCartMessage + '">Bạn chưa chọn sản phẩm nào</div>'
       );
 
       var discountPrice = options.getDiscountPrice(products, ProductManager.getTotalPrice(), ProductManager.getTotalQuantity());
@@ -267,7 +269,7 @@
         $cartTable.append(
           '<tr style="color: red">' +
           '<td></td>' +
-          '<td><strong>Total (including discount)</strong></td>' +
+          '<td><strong>Tổng Cộng (including discount)</strong></td>' +
           '<td></td>' +
           '<td></td>' +
           '<td><strong id="' + idDiscountPrice + '"></strong></td>' +
@@ -290,10 +292,10 @@
       });
     }
     var showGrandTotal = function () {
-      $("#" + idGrandTotal).text(options.currencySymbol + MathHelper.getRoundedNumber(ProductManager.getTotalPrice()));
+      $("#" + idGrandTotal).text( ProductManager.getTotalPrice() + " Đ");
     }
     var showDiscountPrice = function () {
-      $("#" + idDiscountPrice).text(options.currencySymbol + MathHelper.getRoundedNumber(options.getDiscountPrice(ProductManager.getAllProducts(), ProductManager.getTotalPrice(), ProductManager.getTotalQuantity())));
+      $("#" + idDiscountPrice).text( options.getDiscountPrice(ProductManager.getAllProducts(), ProductManager.getTotalPrice(), ProductManager.getTotalQuantity() + " Đ"));
     }
 
     /*
@@ -316,7 +318,7 @@
       var id = $(this).closest("tr").data("id");
       var quantity = $(this).val();
 
-      $(this).parent("td").next("." + classProductTotal).text(options.currencySymbol + MathHelper.getRoundedNumber(price * quantity));
+      $(this).parent("td").next("." + classProductTotal).text( price * quantity + " Đ");
       ProductManager.updatePoduct(id, quantity);
 
       $cartBadge.text(ProductManager.getTotalQuantity());
@@ -379,6 +381,8 @@
     loadMyCartEvent(this.selector);
     return this;
   }
+
+  
 
 
 })(jQuery);
