@@ -1,0 +1,233 @@
+* {
+    box-sizing: border-box;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 18px;
+  }
+
+  body {
+    background-image: url();
+    margin: 0;
+    padding: 0;
+    background: whitesmoke;
+    font-family: 'Maven Pro', sans-serif;
+    font-size: 18px;
+  }
+
+  .wrap {
+    max-width: 1500px;
+    margin: auto;
+    padding: auto;
+    background: white;
+  }
+
+  #banner {
+
+    margin: 0;
+    padding: 0;
+  }
+
+  #backtop {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+  }
+
+  #Call {
+    position: fixed;
+    bottom: 20px;
+    left: 5px;
+
+  }
+
+
+  .NoiDung span {
+    font-style: italic;
+  }
+
+  .imageintro img {
+    float: left;
+  }
+
+  .sanpham {
+    padding: 0;
+    margin: 0;
+  }
+
+  .title {
+    text-align: center;
+    font-weight: bold;
+    font-family: monospace;
+
+  }
+
+  .lienhe {
+    height: 400px;
+  }
+
+  .info {
+    border-color: gainsboro;
+    border-bottom: 2px solid gainsboro;
+  }
+
+  .contact {
+    border-color: gainsboro;
+  }
+
+  .company {
+    border-color: gainsboro;
+
+  }
+
+  .info span {
+    color: brown;
+
+  }
+
+  .contact span {
+    color: brown;
+
+  }
+
+  .company span {
+    color: brown;
+
+  }
+
+  .lienhe a:link {
+    color: black;
+    text-decoration: none;
+  }
+
+  .lienhe a:hover {
+    color: black;
+    text-decoration: none;
+  }
+
+  .lienhe a:active {
+    color: black;
+    text-decoration: none;
+  }
+
+  .lienhe a:visited {
+    color: black;
+    text-decoration: none;
+  }
+
+  a:link {
+    color: black;
+
+  }
+
+  a:hover {
+    color: black;
+
+  }
+
+  a:active {
+    color: black;
+
+  }
+
+  a:visited {
+    color: black;
+
+  }
+
+  .NoiDung.text {
+    color: brown;
+  }
+
+  h1 {
+    text-align: center;
+    color: #777;
+    padding-bottom: 20px;
+  }
+
+  h2 {
+    color: brown;
+    text-align: center;
+  }
+
+  h3 {
+    color: brown;
+    text-align: center;
+  }
+
+  .KM {
+    padding-bottom: 50px;
+  }
+
+  .row {
+    padding: 0;
+    margin: auto;
+    width: 70%;
+    border: 1px solid gainsboro;
+    border-top-width: 5px;
+
+  }
+
+  .row img {
+    width: 50%;
+  }
+
+  .sanpham img:hover {
+    transform: translate(0, -5px)
+  }
+
+  span {
+    text-align: center;
+  }
+
+  .TT {
+
+    margin: auto;
+    width: 70%;
+    height: 800px;
+  }
+
+  @media (max-width:768px) {
+    #backtop {
+      display: none;
+    }
+  }
+
+  @media (min-width:1440px) {
+    #callButton {
+      display: none;
+    }
+  }
+
+  @media (max-width:1000px) {
+    .row {
+      width: 100%;
+    }
+    .row img {
+      width: 100%;
+    }
+    .TT {
+      width: 100%;
+    }
+  }
+
+  img.img-responsive {
+    padding-top: 30px;
+
+    margin: auto;
+    padding-bottom: 30px;
+  }
+
+
+  .title {
+    text-align: center;
+    font-weight: bold;
+    font-family: monospace;
+  }
+
+  span {
+    color: brown;
+  }
+
+  .sendButton {
+    padding-bottom: 7px;
+    padding-top: 156px;
+  }

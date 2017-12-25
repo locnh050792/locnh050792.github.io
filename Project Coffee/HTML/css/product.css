@@ -1,0 +1,59 @@
+@media(min-width:1366px) {
+    .left-box {
+        float: left;
+        margin-left: 20%;
+    }
+
+    .right-box {
+        float: right;
+        margin-right: 20%;
+    }
+    .left-info {
+        float: left;
+        margin-left: 15%;
+    }
+
+    .right-info {
+        float: right;
+        margin-right: 15%;
+    }
+}
+
+.box-details {
+    border: 1px solid gainsboro;
+    padding: 20px;
+}
+
+h5 {
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.sanpham {
+    height: 900px;
+}
+
+h2 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+h3 {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.product_price strong {
+    font-size: 40px;
+}
+
+.product_price span {
+    font-size: .8em;
+}
+
+.title {
+    padding-bottom: 20px;
+}

@@ -237,7 +237,8 @@
       $cartTable.empty();
 
       var products = ProductManager.getAllProducts();
-      $cartTable.append('<tr>' + '<th>' + 'Ảnh' + '</th>' + '<th>' + 'Tên Sản phẩm' + '</th>' + '<th>' + 'Giá Tiền' + '</th>' + '<th>' + 'Số Lượng' + '</th>' + '<th>' + 'Cộng' + '</th>' + '</tr>')
+      
+      $cartTable.append(products.length ? '<tr>' + '<th>' + 'Ảnh' + '</th>' + '<th>' + 'Tên Sản Phẩm' + '</th>' + '<th>' + 'Giá Tiền' + '</th>' + '<th>' + 'SL' + '</th>' + '<th>' + 'Cộng' + '</th>' + '</tr>' :'<div class="alert alert-danger" role="alert" id="' + idEmptyCartMessage + '">Bạn chưa chọn sản phẩm nào</div>')
       $.each(products, function () {
         var total = this.quantity * this.price;
         $cartTable.append(
@@ -261,7 +262,7 @@
         '<td><strong id="' + idGrandTotal + '"></strong></td>' +
         '<td></td>' +
         '</tr>'
-        : '<div class="alert alert-danger" role="alert" id="' + idEmptyCartMessage + '">Bạn chưa chọn sản phẩm nào</div>'
+        : '<div></div>'
       );
 
       var discountPrice = options.getDiscountPrice(products, ProductManager.getTotalPrice(), ProductManager.getTotalQuantity());
