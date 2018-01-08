@@ -1,0 +1,176 @@
+* {
+	/* box-sizing: border-box; */
+	
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: 'Maven Pro', sans-serif;
+	/* overflow-y:hidden;	 */
+}
+
+.main-content {
+	padding: 0;
+	margin: 0;
+	background: url('../img/bg.jpg') center center no-repeat;
+	height: 100%;
+}
+
+.section-info {
+	transform: translateY(0);
+	transition: transform .7s cubic-bezier(.825, 0, .5, 1);
+}
+
+/* .section-contact {
+	position: absolute;
+	top : 1px;
+	z-index: 3;
+	transform: translateY(0);
+	transition: transform .7s cubic-bezier(.825, 0, .5, 1);
+	width: 100%;
+	height: 600px;
+} */
+
+.info {
+	z-index: 2;
+}
+
+.info-name {
+	padding-top: 100px;
+	color: white;
+	height: 403px;
+}
+
+#my-name {
+	font-size: 50px;
+	text-align: center;
+}
+
+#my-job {
+	color: #94A3BA;
+	font-size: 24px;
+	text-align: center;
+	line-height: 100px;
+	letter-spacing: 5px;
+}
+
+.info-slide {
+	position: relative;
+	background: whitesmoke;
+	height: 500px;
+}
+
+#myCarousel {
+	padding-top: 20px;
+	background: whitesmoke;
+}
+
+.carousel-indicators li {
+	background-color: rgba(46, 73, 117, 1);
+	border: 2px solid rgba(46, 73, 117, 1);
+}
+
+.carousel {
+	position: relative;
+	height: 100%;
+}
+
+@media (max-width:1000px){
+	.carousel {
+		position: relative;
+		height: unset;
+	}
+}
+
+.icon-info {
+	padding-top: 30px;
+}
+
+.icon-info img {
+	padding-right: 10px;
+	float: right;
+}
+
+.red-space {
+	background: rgba(223, 49, 67, 1);
+	width: 52px;
+	height: 6px;
+	margin-top: 30px;
+}
+
+.heading-info {
+	height: 120px;
+}
+
+.bold-info {
+	font-weight: bold;
+}
+
+.company {
+	font-style: italic;
+}
+
+.year {
+	color: rgba(46, 73, 117, 1);
+}
+
+.job-info {
+	padding-top: 30px;
+}
+
+.experience-info {
+	pading-left: 50px;
+}
+
+.wheel-up {
+	transform: translateY(-100%);
+}
+
+.wheel-down {
+	transform: translateY(200%);
+}
+
+.info-contact h4{
+	padding-top: 15px;
+}
+
+@media (min-width:1000px){
+	.left-box{
+		margin-left: 15%;
+	}
+}
+
+
+.spantext {
+	width: 100%;
+	padding: 5px;
+    padding-bottom: 5px;
+
+}
+
+.spantext input {
+	width: 72%;
+	float: right;
+	border: 1px solid gainsboro;
+}
+
+.spantext span {
+	font-size: 18px;
+}
+
+textarea {
+	width: 100%;
+	height: 50px;
+	float: right;
+	border: 1px solid gainsboro;
+}
+
+#button {
+    background: black;
+}
+
+.sendButton {
+	color: white;
+	padding-top:  70px;
+}

@@ -245,9 +245,9 @@
           '<tr title="' + this.summary + '" data-id="' + this.id + '" data-price="' + this.price + '">' +
           '<td class="text-center" style="width: 30px;"><img width="30px" height="30px" src="' + this.image + '"/></td>' +
           '<td>' + this.name + '</td>' +
-          '<td title="Unit Price">' +  this.price + " Đ" +'</td>' +
+          '<td title="Unit Price">' +  this.price.toLocaleString() + " Đ" +'</td>' +
           '<td title="Quantity" class="number-input"><input type="number" min="1"  class="' + classProductQuantity + '" value="' + this.quantity + '"/></td>' +
-          '<td title="Tổng Cộng" class="' + classProductTotal + '">' + total + " Đ" +'</td>' +
+          '<td title="Tổng Cộng" class="' + classProductTotal + '">' + total.toLocaleString() + " Đ" +'</td>' +
           '<td title="Remove from Cart" class="text-center" style="width: 30px;"><a href="javascript:void(0);" class="btn btn-xs btn-danger ' + classProductRemove + '">X</a></td>' +
           '</tr>'
         );
@@ -293,7 +293,7 @@
       });
     }
     var showGrandTotal = function () {
-      $("#" + idGrandTotal).text( ProductManager.getTotalPrice() + " Đ");
+      $("#" + idGrandTotal).text( ProductManager.getTotalPrice().toLocaleString() + " Đ");
     }
     var showDiscountPrice = function () {
       $("#" + idDiscountPrice).text( options.getDiscountPrice(ProductManager.getAllProducts(), ProductManager.getTotalPrice(), ProductManager.getTotalQuantity() + " Đ"));
@@ -311,7 +311,7 @@
     }
 
     $cartIcon.click(function () {
-      options.showCheckoutModal ? showModal() : options.clickOnCartIcon($cartIcon, ProductManager.getAllProducts(), ProductManager.getTotalPrice(), ProductManager.getTotalQuantity());
+      options.showCheckoutModal ? showModal() : options.clickOnCartIcon($cartIcon, ProductManager.getAllProducts(), ProductManager.getTotalPrice().toLocaleString(), ProductManager.getTotalQuantity());
     });
 
     $(document).on("input", "." + classProductQuantity, function () {
@@ -319,7 +319,7 @@
       var id = $(this).closest("tr").data("id");
       var quantity = $(this).val();
 
-      $(this).parent("td").next("." + classProductTotal).text( price * quantity + " Đ");
+      $(this).parent("td").next("." + classProductTotal).text( (price * quantity).toLocaleString() + " Đ");
       ProductManager.updatePoduct(id, quantity);
 
       $cartBadge.text(ProductManager.getTotalQuantity());
