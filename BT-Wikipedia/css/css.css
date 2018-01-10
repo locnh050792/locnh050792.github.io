@@ -50,7 +50,7 @@ input:focus{
 @keyframes new-item {
     0% {
       opacity: 0.2;
-      transform: translateY(2000px);
+      transform: translateY(1000px);
     }
     80% {
       opacity: 0.5;
