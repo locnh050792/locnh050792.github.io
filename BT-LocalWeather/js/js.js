@@ -23,6 +23,7 @@ function getWeather(lon, lat) {
   $.ajax({
     url: urlString,
     success: function(result){
+      console.log(result);
       $("#city").text(result.name + ", ");
       $("#country").text(result.sys.country);
       $("#main").text(result.weather[0].main);

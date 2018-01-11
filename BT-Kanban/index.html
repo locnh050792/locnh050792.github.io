@@ -20,56 +20,63 @@
 
     <section class="container">
         <div class="row">
-            <div class="col s4" id="Todo">
+            <div class="col s4">
                 <div class="card">
                     <h5 class="center orange">Todo</h5>
-                    <div class="collection sorted-list">
-                        <div href="#!" class="collection-item ui-state-default">Alvin
+                    <div class="collection sorted-list " id="todo">
+                        <div href="#!" class="collection-item ui-state-default">Alvin<i class="material-icons">delete</i>
                         </div>
-                        <div href="#!" class="collection-item ui-state-default">Alvin
+                        <div href="#!" class="collection-item ui-state-default">Alvin<i class="material-icons">delete</i>
 
                         </div>
-                        <div href="#!" class="collection-item ui-state-default">Alvin
+                        <div href="#!" class="collection-item ui-state-default">Alvin<i class="material-icons">delete</i>
 
                         </div>
-                        <div href="#!" class="collection-item ui-state-default">Alvin</div>
-                        <div class="input-field col s10 center">
-                            <input  id="" type="text"  >
-                            <label class="active" for="first_name2">New Job</label>
-                        </div>
-
+                        <div href="#!" class="collection-item ui-state-default">Alvin<i class="material-icons">delete</i></div>
                     </div>
-
+                    <div class="action">
+                        <div class="input-field col s12 center">
+                            <input id="new_job_todo" type="text" class="validate" onkeydown='app.newJob(event, "todo" , this)'>
+                            <label for="new_job_todo">New Job</label>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="col s4" id="Doing">
+            <div class="col s4">
                 <div class="card">
                     <h5 class="center red">Doing</h5>
-                    <div class="collection sorted-list">
-                        <div href="#!" class="collection-item ui-state-default">Alvin</div>
-                        <div href="#!" class="collection-item ui-state-default">Alvin</div>
-                        <div href="#!" class="collection-item ui-state-default">Alvin</div>
-                        <div href="#!" class="collection-item ui-state-default">Alvin</div>
-                    </div>
+                    <div class="collection sorted-list" id="doing">
+                        <div href="#!" class="collection-item ui-state-default">Alvin<i class="material-icons">delete</i></div>
+                        <div href="#!" class="collection-item ui-state-default">Alvin<i class="material-icons">delete</i></div>
 
+                    </div>
+                    <div class="action">
+                        <div class="input-field col s10 ">
+                            <input id="new_job_doing" type="text" onkeydown="app.newJob(event, 'doing' , this)">
+                            <label for="new_job_doing">New Job</label>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="col s4" id="Done">
+            <div class="col s4">
                 <div class="card">
                     <h5 class="center green">Done</h5>
-                    <div class="collection sorted-list">
-                        <div href="#!" class="collection-item ui-state-default">Alvin</div>
-                        <div href="#!" class="collection-item ui-state-default">Alvin</div>
-                        <div href="#!" class="collection-item ui-state-default">Alvin</div>
-                        <div href="#!" class="collection-item ui-state-default">Alvin</div>
+                    <div class="collection sorted-list" id="done">
+                        <div href="#!" class="collection-item ui-state-default">Alvin<i class="material-icons">delete</i></div>
                     </div>
-
+                    <div class="action">
+                        <div class="input-field col s10 center">
+                            <input id="new_job_done" type="text" onkeydown="app.newJob(event, 'done' , this)">
+                            <label for="new_job_done">New Job</label>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
 
 
     <!-- <script src="js/materialize.min.js"></script> -->
