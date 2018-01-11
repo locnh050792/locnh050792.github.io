@@ -54,7 +54,20 @@ body {
 .info-name {
 	padding-top: 100px;
 	color: white;
-	height: 403px;
+	height: 449px;
+}
+
+@media (min-width:1000px) and (max-width:1500px){
+	.info-name {
+		padding-top: 100px;
+		color: white;
+		height: 270px;
+	}
+	.info-slide {
+		position: relative;
+		background: whitesmoke;
+		height: 497px;
+	}
 }
 
 #my-name {
@@ -135,7 +148,7 @@ body {
 }
 
 .experience-info {
-	pading-left: 50px;
+	padding-left: 50px;
 }
 
 
