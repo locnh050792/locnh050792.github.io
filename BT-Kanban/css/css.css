@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
 
 .ui-state-highlight{
     background: red;
@@ -31,6 +35,7 @@ i.material-icons{
     background-color: #ff4444 !important ;
 }
 .collection {
+    margin: 3rem 0 1rem 0 !important;
     overflow: unset !important;
 }
 
