@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 .ui-state-highlight{
     background: red;
 }
@@ -10,12 +11,26 @@
     float: right;
 }
 
-/* i.material-icons{
+i.material-icons{
     display: none;
-} */
+}
 
 .ui-state-highlight {
      height: calc(1.5rem + 20px);
      background: whitesmoke;
+}
+
+.input-collection{
+        border-radius: 2px;
+        overflow: hidden;
+        position: relative;
+        padding: 0px 10px;
+}
+
+.danger{
+    background-color: #ff4444 !important ;
+}
+.collection {
+    overflow: unset !important;
 }
 

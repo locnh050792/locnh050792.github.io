@@ -22,20 +22,11 @@
         <div class="row">
             <div class="col s4">
                 <div class="card">
-                    <h5 class="center orange">Todo</h5>
-                    <div class="collection sorted-list " id="todo">
-                        <div href="#!" class="collection-item ui-state-default">Alvin<i class="material-icons">delete</i>
-                        </div>
-                        <div href="#!" class="collection-item ui-state-default">Alvin<i class="material-icons">delete</i>
-
-                        </div>
-                        <div href="#!" class="collection-item ui-state-default">Alvin<i class="material-icons">delete</i>
-
-                        </div>
-                        <div href="#!" class="collection-item ui-state-default">Alvin<i class="material-icons">delete</i></div>
+                    <h5 class="center orange">TODO</h5>
+                    <div class="collection connectedSortable" id="todo">
                     </div>
-                    <div class="action">
-                        <div class="input-field col s12 center">
+                    <div class="input-collection">
+                        <div class="input-field col s10 center">
                             <input id="new_job_todo" type="text" class="validate" onkeydown='app.newJob(event, "todo" , this)'>
                             <label for="new_job_todo">New Job</label>
                         </div>
@@ -45,13 +36,10 @@
 
             <div class="col s4">
                 <div class="card">
-                    <h5 class="center red">Doing</h5>
-                    <div class="collection sorted-list" id="doing">
-                        <div href="#!" class="collection-item ui-state-default">Alvin<i class="material-icons">delete</i></div>
-                        <div href="#!" class="collection-item ui-state-default">Alvin<i class="material-icons">delete</i></div>
-
+                    <h5 class="center red">DOING</h5>
+                    <div class="collection connectedSortable" id="doing">
                     </div>
-                    <div class="action">
+                    <div class="input-collection">
                         <div class="input-field col s10 ">
                             <input id="new_job_doing" type="text" onkeydown="app.newJob(event, 'doing' , this)">
                             <label for="new_job_doing">New Job</label>
@@ -62,11 +50,10 @@
 
             <div class="col s4">
                 <div class="card">
-                    <h5 class="center green">Done</h5>
-                    <div class="collection sorted-list" id="done">
-                        <div href="#!" class="collection-item ui-state-default">Alvin<i class="material-icons">delete</i></div>
+                    <h5 class="center green">DONE</h5>
+                    <div class="collection connectedSortable" id="done">
                     </div>
-                    <div class="action">
+                    <div class="input-collection">
                         <div class="input-field col s10 center">
                             <input id="new_job_done" type="text" onkeydown="app.newJob(event, 'done' , this)">
                             <label for="new_job_done">New Job</label>
@@ -77,10 +64,21 @@
         </div>
     </section>
 
+    <!-- Modal Structure -->
+    <div id="modal1" class="modal">
+        <div class="modal-content">
+            <h4>Confirm Delete</h4>
+            <p>Are you sure to delete this job ?</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#!" class="modal-action waves-effect waves-light btn modal-close">Close</a>
+            <a href="#!" class="modal-action modal-close waves-effect waves-light btn danger" id="btn-delete">Agree</a>
+        </div>
+    </div>
 
 
-    <!-- <script src="js/materialize.min.js"></script> -->
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/materialize.min.js"></script>
     <script src="js/jquery-ui.min.js"></script>
     <script src="js/js.js"></script>
 
