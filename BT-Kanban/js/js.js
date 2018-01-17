@@ -37,6 +37,13 @@ var app = {
         var event = window.event || e;
 
         if (event.keyCode === 13 && jobName.trim() !== "") {
+            var count = $('#' + type + ' > div').length + 1;
+            if (type === "doing" && count > 3) {
+                Materialize.toast('Doing can not more than 3 jobs', 2000)
+                return false;
+                
+                
+            }
             if (!list[type]) list[type] = [];
             list[type].push(jobName);
             DB.setData(list);
@@ -45,17 +52,28 @@ var app = {
             this.addJobToList(type, jobName);
             //reset input
             $('input').val('');
+
         }
     },
 
     addJobToList: function (type, jobName) {
+        // var countDoing = $('#doing > div').length + 1;
+        // console.log(countDoing)
+        // if (countDoing > 3) {
+        //     console.log('Doing ko dc vuot qua 3')
+        //     return false;          
+        // }
         var count = $('#' + type + ' > div').length + 1;
-        // console.log(count + 1);
+        // if (type === "doing" && count > 3) {
+
+        //     return false;
+        //     console.log('Doing ko dc vuot qua 3')
+        // }
+        // console.log(count);
         $('#' + type).prev().html('<h5>' + type.toUpperCase() + '<span>  (' + count + ')</span>' + '</h5>')
         var item = '<div href="#!" class="collection-item ui-state-default">' + jobName + '<i class="material-icons modal-trigger" data-target="modal1" onclick="app.deleteJob(this)">delete</i>' + '</div>';
         $('#' + type).append(item);
         //    console.log('#' + type +' .collection-item'.length )
-
         $(".collection-item").hover(function () {
             $(this).children().show();
         },
@@ -66,11 +84,11 @@ var app = {
     },
 
     deleteJob: function (i) {
-        console.log(i)
+        // console.log(i)
         var modal = $('#modal-confirm');
         var item = $(i).parent();
         var btn = $('#btn-delete');
-        
+
         // console.log(count);
         $('.modal').modal();
         modal.modal('open');
@@ -80,7 +98,7 @@ var app = {
             var itemPosition = $('#' + columnType).children().index(item);
             var count = $('#' + columnType + ' > div').length - 1;
             $('#' + columnType).prev().html('<h5>' + columnType.toUpperCase() + '<span>  (' + count + ')</span>' + '</h5>')
-            console.log(count);
+            // console.log(count);
             list[columnType].splice(itemPosition, 1)
             DB.setData(list);
             item.remove();
@@ -100,7 +118,7 @@ $(function () {
             app.addJobToList(type, jobName);
         })
 
-        countJobLocalStorage  = list[type].length;
+        countJobLocalStorage = list[type].length;
 
         // console.log(countJob);
         $('#' + type).prev().html('<h5>' + type.toUpperCase() + '<span>  (' + countJobLocalStorage + ')</span>' + '</h5>')
@@ -122,7 +140,13 @@ $(function () {
         stop: function (event, ui) {
             // $(ui.item[0]).addClass('dragging');
             // console.log(event)
-            console.log(ui)
+            // console.log(ui)
+            var countDoing = $('#doing > div').length;
+            console.log(countDoing)
+            if (countDoing > 3) {
+                Materialize.toast('Doing can not more than 3 jobs', 2000)
+                return false;
+            }
             var item = ui.item;
             var oldColumnType = item.oldColumnType;
             var oldItemPosition = item.oldItemPosition;

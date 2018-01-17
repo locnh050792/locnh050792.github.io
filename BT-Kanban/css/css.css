@@ -39,3 +39,9 @@ i.material-icons{
     overflow: unset !important;
 }
 
+#toast-container {
+    top: 43% !important;
+    right: 39.2% !important;
+    max-width: 86%;
+}
+
