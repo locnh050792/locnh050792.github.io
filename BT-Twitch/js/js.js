@@ -12,11 +12,11 @@ function getChannelInfo() {
 
             if (data.stream === null) {
                 game = "Offline";
-                status = "offline";
+                status = "Offline";
             }
             else if (data.stream === undefined) {
                 game = "Game Close";
-                status = "offline";
+                status = "Offline";
             }
             else {
                 game = data.stream.game;
@@ -28,12 +28,24 @@ function getChannelInfo() {
                 var description = status === "Online" ? ":" + data.status : "Offline";
                 // console.log(data)
                 console.log(description)
-                $(".main-content").append(
-                    "<div class='row navbar-inverse'>" +
-                    "<div class='logo col-lg-3'> <a target='_blank' href='" + data.url + "'> <img id='logo' src=" + logo + " alt='logo'> </div>" +
-                    "<div class='name col-lg-3'>" + name + "</div> <div class='status col-lg-6'>" + description + "</div>" +
-                    "</div>"
-                )
+                if (status === "Online") {
+                    $(".main-content").prepend(
+                        "<div class='row navbar-inverse " + status + "'>" +
+                        "<div class='logo col-lg-3'> <a target='_blank' href='" + data.url + "'> <img id='logo' src=" + logo + " alt='logo'> </div>" +
+                        "<div class='name col-lg-3'>" + name + "</div> <div class='status col-lg-6'>" + description + "</div>" +
+                        "</div>"
+
+                    )
+                } else {
+                    $(".main-content").append(
+                        "<div class='row navbar-inverse " + status + "'>" +
+                        "<div class='logo col-lg-3'> <a target='_blank' href='" + data.url + "'> <img id='logo' src=" + logo + " alt='logo'> </div>" +
+                        "<div class='name col-lg-3'>" + name + "</div> <div class='status col-lg-6'>" + description + "</div>" +
+                        "</div>"
+
+                    )
+                }
+
             })
 
         })
@@ -42,4 +54,19 @@ function getChannelInfo() {
 
 $(function () {
     getChannelInfo();
+    if ($('.row').hasClass('Online')) {
+        $('.row').css('background-color', 'red')
+    }
+    $('#all').on('click', function () {
+        $('.row').show();
+    })
+
+    $('#offline').on('click', function () {
+        $('.Offline').show();
+        $('.Online').hide();
+    })
+    $('#online').on('click', function () {
+        $('.Online').show();
+        $('.Offline').hide();
+    })
 })
