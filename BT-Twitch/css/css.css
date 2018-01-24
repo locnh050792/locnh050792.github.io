@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+body{
+    background: whitesmoke;
+}
+
 .menu{
     max-width: 500px;
     margin: auto;
@@ -38,4 +42,8 @@ ul#pills-tab {
     padding-top: 30px;
     padding-bottom: 30px;
     border-bottom: 1px solid white; 
+}
+
+.Offline{
+    color:white;
 }

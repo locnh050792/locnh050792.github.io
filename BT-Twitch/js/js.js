@@ -26,24 +26,16 @@ function getChannelInfo() {
                 var logo = data.logo != null ? data.logo : "https://dummyimage.com/50x50/ecf0e7/5c5457.jpg&text=0x3F";
                 var name = data.display_name != null ? data.display_name : channel;
                 var description = status === "Online" ? ":" + data.status : "Offline";
+                var mainContent = "<div class='row navbar-inverse " + status + "'>" +
+                    "<div class='logo col-lg-2'> <a target='_blank' href='" + data.url + "'> <img id='logo' src=" + logo + " alt='logo'> </div>" +
+                    "<div class='name col-lg-3'>" + name + "</div> <div class='status col-lg-7'>" + description + "</div>" +
+                    "</div>";
                 // console.log(data)
                 console.log(description)
                 if (status === "Online") {
-                    $(".main-content").prepend(
-                        "<div class='row navbar-inverse " + status + "'>" +
-                        "<div class='logo col-lg-3'> <a target='_blank' href='" + data.url + "'> <img id='logo' src=" + logo + " alt='logo'> </div>" +
-                        "<div class='name col-lg-3'>" + name + "</div> <div class='status col-lg-6'>" + description + "</div>" +
-                        "</div>"
-
-                    )
+                    $(".main-content").prepend(mainContent)
                 } else {
-                    $(".main-content").append(
-                        "<div class='row navbar-inverse " + status + "'>" +
-                        "<div class='logo col-lg-3'> <a target='_blank' href='" + data.url + "'> <img id='logo' src=" + logo + " alt='logo'> </div>" +
-                        "<div class='name col-lg-3'>" + name + "</div> <div class='status col-lg-6'>" + description + "</div>" +
-                        "</div>"
-
-                    )
+                    $(".main-content").append(mainContent)
                 }
 
             })
@@ -55,7 +47,7 @@ function getChannelInfo() {
 $(function () {
     getChannelInfo();
     if ($('.row').hasClass('Online')) {
-        $('.row').css('background-color', 'red')
+        $('.Online').css('background-color', 'red')
     }
     $('#all').on('click', function () {
         $('.row').show();
